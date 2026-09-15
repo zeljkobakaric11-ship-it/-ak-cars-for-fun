@@ -1,148 +1,164 @@
+
 <!DOCTYPE html>
 <html lang="hr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#090909">
-  <title>AK Cars for Fun</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#080808">
+<title>AK Cars for Fun</title>
 
-  <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{
+  background:#080808;
+  color:#f5f5f5;
+  font-family:Arial,Helvetica,sans-serif;
+  min-height:100vh;
+}
+header{
+  padding:25px 20px;
+  border-bottom:1px solid #242424;
+}
+.brand{
+  font-size:22px;
+  font-weight:900;
+  letter-spacing:2px;
+}
+.red{color:#ef3d3d}
 
-    body {
-      background: #090909;
-      color: #f5f5f5;
-      font-family: Arial, Helvetica, sans-serif;
-      min-height: 100vh;
-      padding-bottom: 95px;
-    }
+main{
+  max-width:700px;
+  margin:auto;
+  padding:38px 20px 125px;
+}
+.page{display:none}
+.page.active{display:block}
 
-    header {
-      padding: 24px 20px;
-      border-bottom: 1px solid #242424;
-    }
+.tag{
+  color:#ef3d3d;
+  font-size:12px;
+  font-weight:800;
+  letter-spacing:3px;
+  margin-bottom:18px;
+}
+h1{
+  font-size:clamp(45px,13vw,75px);
+  line-height:.92;
+  text-transform:uppercase;
+  letter-spacing:-3px;
+  margin-bottom:25px;
+}
+h2{
+  font-size:35px;
+  margin-bottom:12px;
+}
+.intro{
+  color:#999;
+  font-size:17px;
+  line-height:1.6;
+  margin-bottom:32px;
+}
 
-    .brand {
-      font-size: 22px;
-      font-weight: 900;
-      letter-spacing: 1px;
-    }
+.card{
+  background:#121212;
+  border:1px solid #292929;
+  border-radius:18px;
+  padding:23px;
+  margin-bottom:15px;
+}
+.card-label{
+  color:#ef3d3d;
+  font-size:12px;
+  font-weight:900;
+  letter-spacing:2px;
+}
+.card h3{
+  font-size:23px;
+  margin:9px 0;
+}
+.card p{
+  color:#999;
+  line-height:1.5;
+}
 
-    .brand span {
-      color: #e53935;
-    }
+.member{
+  display:flex;
+  align-items:center;
+  gap:15px;
+}
+.avatar{
+  width:62px;
+  height:62px;
+  border-radius:50%;
+  background:#202020;
+  border:2px solid #ef3d3d;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:24px;
+  flex-shrink:0;
+}
+.member-info h3{margin:0 0 5px}
+.member-info p{font-size:14px}
 
-    main {
-      padding: 42px 20px;
-      max-width: 700px;
-      margin: auto;
-    }
+.empty{
+  text-align:center;
+  padding:45px 20px;
+  border:1px dashed #333;
+  border-radius:18px;
+  color:#777;
+}
+.empty-icon{
+  font-size:35px;
+  margin-bottom:15px;
+}
 
-    .tag {
-      color: #e53935;
-      font-size: 12px;
-      font-weight: bold;
-      letter-spacing: 3px;
-      margin-bottom: 20px;
-    }
-
-    h1 {
-      font-size: clamp(48px, 14vw, 78px);
-      line-height: 0.92;
-      text-transform: uppercase;
-      letter-spacing: -3px;
-      margin-bottom: 25px;
-    }
-
-    h1 span {
-      color: #e53935;
-    }
-
-    .intro {
-      color: #aaa;
-      font-size: 17px;
-      line-height: 1.6;
-      margin-bottom: 38px;
-    }
-
-    .card {
-      background: #131313;
-      border: 1px solid #292929;
-      border-radius: 16px;
-      padding: 24px;
-      margin-bottom: 15px;
-    }
-
-    .card small {
-      color: #e53935;
-      font-weight: bold;
-      letter-spacing: 2px;
-    }
-
-    .card h2 {
-      margin: 9px 0;
-      font-size: 24px;
-    }
-
-    .card p {
-      color: #999;
-      line-height: 1.5;
-    }
-
-    nav {
-      position: fixed;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      height: 78px;
-      background: rgba(9,9,9,.97);
-      border-top: 1px solid #292929;
-      display: flex;
-      align-items: center;
-      justify-content: space-around;
-    }
-
-    nav a {
-      color: #777;
-      text-decoration: none;
-      font-size: 10px;
-      font-weight: bold;
-      text-align: center;
-    }
-
-    nav a.active {
-      color: #e53935;
-    }
-
-    nav b {
-      display: block;
-      font-size: 21px;
-      margin-bottom: 5px;
-    }
-  </style>
+nav{
+  position:fixed;
+  left:0;
+  right:0;
+  bottom:0;
+  min-height:82px;
+  padding-bottom:env(safe-area-inset-bottom);
+  background:rgba(8,8,8,.97);
+  border-top:1px solid #292929;
+  display:flex;
+  align-items:flex-start;
+  justify-content:space-around;
+  z-index:999;
+}
+nav button{
+  width:20%;
+  padding:13px 2px 8px;
+  border:0;
+  background:none;
+  color:#777;
+  font-weight:800;
+  font-size:10px;
+}
+nav button.active{color:#ef3d3d}
+.nav-icon{
+  display:block;
+  font-size:22px;
+  height:28px;
+}
+</style>
 </head>
 
 <body>
 
 <header>
-  <div class="brand">
-    AK CARS FOR <span>FUN</span>
-  </div>
+  <div class="brand">AK CARS FOR <span class="red">FUN</span></div>
 </header>
 
 <main>
 
-  <div class="tag">
-    ZAGREB / HRVATSKA — AKCF
-  </div>
+<section id="home" class="page active">
+  <div class="tag">ZAGREB / HRVATSKA — AKCF</div>
 
   <h1>
     VIŠE OD<br>
-    <span>AUTOMOBILA.</span>
+    <span class="red">AUTOMOBILA.</span>
   </h1>
 
   <p class="intro">
@@ -151,52 +167,150 @@
     na jednom mjestu.
   </p>
 
-  <div class="card">
-    <small>ČLANOVI</small>
-    <h2>Naša ekipa</h2>
+  <div class="card" onclick="showPage('members')">
+    <span class="card-label">ČLANOVI</span>
+    <h3>Naša ekipa →</h3>
     <p>Upoznaj članove AK Cars for Fun i automobile koje voze.</p>
   </div>
 
-  <div class="card">
-    <small>GARAŽA</small>
-    <h2>Naši automobili</h2>
-    <p>Motori, snaga, felge, modifikacije i fotografije automobila članova.</p>
+  <div class="card" onclick="showPage('garage')">
+    <span class="card-label">GARAŽA</span>
+    <h3>Naši automobili →</h3>
+    <p>Motori, snaga, felge, modifikacije i projekti naših članova.</p>
   </div>
 
-  <div class="card">
-    <small>MEETOVI</small>
-    <h2>Okupljanja</h2>
-    <p>Sve informacije o nadolazećim meetovima i događanjima kluba.</p>
+  <div class="card" onclick="showPage('meets')">
+    <span class="card-label">MEETOVI</span>
+    <h3>Okupljanja →</h3>
+    <p>Sve informacije o nadolazećim meetovima kluba.</p>
   </div>
+</section>
+
+
+<section id="members" class="page">
+  <div class="tag">AK CARS FOR FUN</div>
+  <h2>Članovi</h2>
+
+  <p class="intro">
+    Ljudi iza automobila. Upoznaj našu ekipu i njihove projekte.
+  </p>
+
+  <div class="card member">
+    <div class="avatar">👤</div>
+    <div class="member-info">
+      <span class="card-label">ČLAN</span>
+      <h3>Željko</h3>
+      <p>Automobil ćemo dodati.</p>
+    </div>
+  </div>
+
+  <div class="empty">
+    <div class="empty-icon">+</div>
+    Ostale članove dodajemo jednog po jednog.
+  </div>
+</section>
+
+
+<section id="garage" class="page">
+  <div class="tag">DIGITALNA GARAŽA</div>
+  <h2>Garaža</h2>
+
+  <p class="intro">
+    Automobili članova AK Cars for Fun.
+  </p>
+
+  <div class="empty">
+    <div class="empty-icon">🏁</div>
+    Automobili uskoro dolaze u garažu.
+  </div>
+</section>
+
+
+<section id="meets" class="page">
+  <div class="tag">AKCF EVENTS</div>
+  <h2>Meetovi</h2>
+
+  <p class="intro">
+    Okupljanja, vožnje i događanja AK Cars for Fun ekipe.
+  </p>
+
+  <div class="empty">
+    <div class="empty-icon">📍</div>
+    Trenutno nema objavljenog sljedećeg meeta.
+  </div>
+</section>
+
+
+<section id="gallery" class="page">
+  <div class="tag">AKCF MEDIA</div>
+  <h2>Galerija</h2>
+
+  <p class="intro">
+    Fotografije automobila, meetova i naše ekipe.
+  </p>
+
+  <div class="empty">
+    <div class="empty-icon">📸</div>
+    Fotografije ćemo dodati ovdje.
+  </div>
+</section>
 
 </main>
 
+
 <nav>
-  <a class="active" href="#">
-    <b>⌂</b>
-    POČETNA
-  </a>
+<button class="active" onclick="showPage('home',this)">
+  <span class="nav-icon">⌂</span>
+  POČETNA
+</button>
 
-  <a href="#">
-    <b>♙</b>
-    ČLANOVI
-  </a>
+<button onclick="showPage('members',this)">
+  <span class="nav-icon">♙</span>
+  ČLANOVI
+</button>
 
-  <a href="#">
-    <b>🚗</b>
-    GARAŽA
-  </a>
+<button onclick="showPage('garage',this)">
+  <span class="nav-icon">🚗</span>
+  GARAŽA
+</button>
 
-  <a href="#">
-    <b>▣</b>
-    MEETOVI
-  </a>
+<button onclick="showPage('meets',this)">
+  <span class="nav-icon">◆</span>
+  MEETOVI
+</button>
 
-  <a href="#">
-    <b>▦</b>
-    GALERIJA
-  </a>
+<button onclick="showPage('gallery',this)">
+  <span class="nav-icon">▦</span>
+  GALERIJA
+</button>
 </nav>
+
+
+<script>
+function showPage(pageId, button){
+  document.querySelectorAll('.page').forEach(function(page){
+    page.classList.remove('active');
+  });
+
+  document.getElementById(pageId).classList.add('active');
+
+  document.querySelectorAll('nav button').forEach(function(btn){
+    btn.classList.remove('active');
+  });
+
+  if(button){
+    button.classList.add('active');
+  } else {
+    document.querySelectorAll('nav button').forEach(function(btn){
+      if(btn.getAttribute('onclick').includes("'" + pageId + "'")){
+        btn.classList.add('active');
+      }
+    });
+  }
+
+  window.scrollTo(0,0);
+}
+</script>
 
 </body>
 </html>
