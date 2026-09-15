@@ -1,1 +1,202 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#090909">
+  <title>AK Cars for Fun</title>
 
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background: #090909;
+      color: #f5f5f5;
+      font-family: Arial, Helvetica, sans-serif;
+      min-height: 100vh;
+      padding-bottom: 95px;
+    }
+
+    header {
+      padding: 24px 20px;
+      border-bottom: 1px solid #242424;
+    }
+
+    .brand {
+      font-size: 22px;
+      font-weight: 900;
+      letter-spacing: 1px;
+    }
+
+    .brand span {
+      color: #e53935;
+    }
+
+    main {
+      padding: 42px 20px;
+      max-width: 700px;
+      margin: auto;
+    }
+
+    .tag {
+      color: #e53935;
+      font-size: 12px;
+      font-weight: bold;
+      letter-spacing: 3px;
+      margin-bottom: 20px;
+    }
+
+    h1 {
+      font-size: clamp(48px, 14vw, 78px);
+      line-height: 0.92;
+      text-transform: uppercase;
+      letter-spacing: -3px;
+      margin-bottom: 25px;
+    }
+
+    h1 span {
+      color: #e53935;
+    }
+
+    .intro {
+      color: #aaa;
+      font-size: 17px;
+      line-height: 1.6;
+      margin-bottom: 38px;
+    }
+
+    .card {
+      background: #131313;
+      border: 1px solid #292929;
+      border-radius: 16px;
+      padding: 24px;
+      margin-bottom: 15px;
+    }
+
+    .card small {
+      color: #e53935;
+      font-weight: bold;
+      letter-spacing: 2px;
+    }
+
+    .card h2 {
+      margin: 9px 0;
+      font-size: 24px;
+    }
+
+    .card p {
+      color: #999;
+      line-height: 1.5;
+    }
+
+    nav {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 78px;
+      background: rgba(9,9,9,.97);
+      border-top: 1px solid #292929;
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+    }
+
+    nav a {
+      color: #777;
+      text-decoration: none;
+      font-size: 10px;
+      font-weight: bold;
+      text-align: center;
+    }
+
+    nav a.active {
+      color: #e53935;
+    }
+
+    nav b {
+      display: block;
+      font-size: 21px;
+      margin-bottom: 5px;
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div class="brand">
+    AK CARS FOR <span>FUN</span>
+  </div>
+</header>
+
+<main>
+
+  <div class="tag">
+    ZAGREB / HRVATSKA — AKCF
+  </div>
+
+  <h1>
+    VIŠE OD<br>
+    <span>AUTOMOBILA.</span>
+  </h1>
+
+  <p class="intro">
+    Dobrodošli u digitalnu garažu AK Cars for Fun.
+    Članovi, automobili, meetovi i priče naše ekipe
+    na jednom mjestu.
+  </p>
+
+  <div class="card">
+    <small>ČLANOVI</small>
+    <h2>Naša ekipa</h2>
+    <p>Upoznaj članove AK Cars for Fun i automobile koje voze.</p>
+  </div>
+
+  <div class="card">
+    <small>GARAŽA</small>
+    <h2>Naši automobili</h2>
+    <p>Motori, snaga, felge, modifikacije i fotografije automobila članova.</p>
+  </div>
+
+  <div class="card">
+    <small>MEETOVI</small>
+    <h2>Okupljanja</h2>
+    <p>Sve informacije o nadolazećim meetovima i događanjima kluba.</p>
+  </div>
+
+</main>
+
+<nav>
+  <a class="active" href="#">
+    <b>⌂</b>
+    POČETNA
+  </a>
+
+  <a href="#">
+    <b>♙</b>
+    ČLANOVI
+  </a>
+
+  <a href="#">
+    <b>🚗</b>
+    GARAŽA
+  </a>
+
+  <a href="#">
+    <b>▣</b>
+    MEETOVI
+  </a>
+
+  <a href="#">
+    <b>▦</b>
+    GALERIJA
+  </a>
+</nav>
+
+</body>
+</html>
