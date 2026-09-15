@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="hr">
 <head>
@@ -9,21 +8,25 @@
 
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
+
 body{
   background:#080808;
   color:#f5f5f5;
   font-family:Arial,Helvetica,sans-serif;
   min-height:100vh;
 }
+
 header{
   padding:25px 20px;
   border-bottom:1px solid #242424;
 }
+
 .brand{
   font-size:22px;
   font-weight:900;
   letter-spacing:2px;
 }
+
 .red{color:#ef3d3d}
 
 main{
@@ -31,16 +34,18 @@ main{
   margin:auto;
   padding:38px 20px 125px;
 }
+
 .page{display:none}
 .page.active{display:block}
 
 .tag{
   color:#ef3d3d;
   font-size:12px;
-  font-weight:800;
+  font-weight:900;
   letter-spacing:3px;
   margin-bottom:18px;
 }
+
 h1{
   font-size:clamp(45px,13vw,75px);
   line-height:.92;
@@ -48,10 +53,12 @@ h1{
   letter-spacing:-3px;
   margin-bottom:25px;
 }
+
 h2{
-  font-size:35px;
+  font-size:36px;
   margin-bottom:12px;
 }
+
 .intro{
   color:#999;
   font-size:17px;
@@ -63,43 +70,109 @@ h2{
   background:#121212;
   border:1px solid #292929;
   border-radius:18px;
-  padding:23px;
-  margin-bottom:15px;
+  padding:22px;
+  margin-bottom:16px;
 }
+
+.clickable{
+  cursor:pointer;
+}
+
 .card-label{
   color:#ef3d3d;
   font-size:12px;
   font-weight:900;
   letter-spacing:2px;
 }
+
 .card h3{
   font-size:23px;
   margin:9px 0;
 }
+
 .card p{
   color:#999;
   line-height:1.5;
 }
 
-.member{
-  display:flex;
-  align-items:center;
-  gap:15px;
+.member-car{
+  width:100%;
+  height:190px;
+  object-fit:cover;
+  border-radius:14px;
+  margin-bottom:18px;
 }
-.avatar{
-  width:62px;
-  height:62px;
-  border-radius:50%;
-  background:#202020;
-  border:2px solid #ef3d3d;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  font-size:24px;
-  flex-shrink:0;
+
+.profile-car{
+  width:100%;
+  height:280px;
+  object-fit:cover;
+  border-radius:18px;
+  margin-bottom:22px;
 }
-.member-info h3{margin:0 0 5px}
-.member-info p{font-size:14px}
+
+.profile-name{
+  font-size:40px;
+  margin-bottom:4px;
+}
+
+.profile-car-name{
+  color:#ef3d3d;
+  font-size:20px;
+  font-weight:800;
+  margin-bottom:28px;
+}
+
+.spec-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:10px;
+  margin-bottom:16px;
+}
+
+.spec{
+  background:#121212;
+  border:1px solid #292929;
+  border-radius:14px;
+  padding:16px;
+}
+
+.spec small{
+  display:block;
+  color:#777;
+  font-size:10px;
+  letter-spacing:2px;
+  margin-bottom:7px;
+}
+
+.spec strong{
+  font-size:17px;
+}
+
+.mods{
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px;
+  margin-top:15px;
+}
+
+.mod{
+  background:#1d1d1d;
+  border:1px solid #333;
+  border-radius:30px;
+  padding:9px 13px;
+  font-size:13px;
+}
+
+.back{
+  border:0;
+  background:none;
+  color:#ef3d3d;
+  font-size:15px;
+  font-weight:bold;
+  margin-bottom:25px;
+  padding:0;
+}
 
 .empty{
   text-align:center;
@@ -107,10 +180,6 @@ h2{
   border:1px dashed #333;
   border-radius:18px;
   color:#777;
-}
-.empty-icon{
-  font-size:35px;
-  margin-bottom:15px;
 }
 
 nav{
@@ -127,6 +196,7 @@ nav{
   justify-content:space-around;
   z-index:999;
 }
+
 nav button{
   width:20%;
   padding:13px 2px 8px;
@@ -136,7 +206,11 @@ nav button{
   font-weight:800;
   font-size:10px;
 }
-nav button.active{color:#ef3d3d}
+
+nav button.active{
+  color:#ef3d3d;
+}
+
 .nav-icon{
   display:block;
   font-size:22px;
@@ -148,12 +222,17 @@ nav button.active{color:#ef3d3d}
 <body>
 
 <header>
-  <div class="brand">AK CARS FOR <span class="red">FUN</span></div>
+  <div class="brand">
+    AK CARS FOR <span class="red">FUN</span>
+  </div>
 </header>
 
 <main>
 
+<!-- POČETNA -->
+
 <section id="home" class="page active">
+
   <div class="tag">ZAGREB / HRVATSKA — AKCF</div>
 
   <h1>
@@ -167,67 +246,160 @@ nav button.active{color:#ef3d3d}
     na jednom mjestu.
   </p>
 
-  <div class="card" onclick="showPage('members')">
+  <div class="card clickable" onclick="showPage('members')">
     <span class="card-label">ČLANOVI</span>
     <h3>Naša ekipa →</h3>
-    <p>Upoznaj članove AK Cars for Fun i automobile koje voze.</p>
+    <p>Upoznaj članove i automobile koje voze.</p>
   </div>
 
-  <div class="card" onclick="showPage('garage')">
+  <div class="card clickable" onclick="showPage('garage')">
     <span class="card-label">GARAŽA</span>
     <h3>Naši automobili →</h3>
-    <p>Motori, snaga, felge, modifikacije i projekti naših članova.</p>
+    <p>Pogledaj projekte AK Cars for Fun ekipe.</p>
   </div>
 
-  <div class="card" onclick="showPage('meets')">
-    <span class="card-label">MEETOVI</span>
-    <h3>Okupljanja →</h3>
-    <p>Sve informacije o nadolazećim meetovima kluba.</p>
-  </div>
 </section>
 
 
+<!-- ČLANOVI -->
+
 <section id="members" class="page">
+
   <div class="tag">AK CARS FOR FUN</div>
+
   <h2>Članovi</h2>
 
   <p class="intro">
     Ljudi iza automobila. Upoznaj našu ekipu i njihove projekte.
   </p>
 
-  <div class="card member">
-    <div class="avatar">👤</div>
-    <div class="member-info">
-      <span class="card-label">ČLAN</span>
-      <h3>Željko</h3>
-      <p>Automobil ćemo dodati.</p>
-    </div>
+  <div class="card clickable" onclick="showPage('zeljko')">
+
+    <img
+      class="member-car"
+      src="IMG_5436.jpeg"
+      alt="Željko - VW Golf 4">
+
+    <span class="card-label">ČLAN</span>
+
+    <h3>Željko</h3>
+
+    <p>
+      VW Golf 4 • 1998.<br>
+      1.9 TDI • 150 KS
+    </p>
+
   </div>
 
-  <div class="empty">
-    <div class="empty-icon">+</div>
-    Ostale članove dodajemo jednog po jednog.
-  </div>
 </section>
 
 
+<!-- ŽELJKO PROFIL -->
+
+<section id="zeljko" class="page">
+
+  <button class="back" onclick="showPage('members')">
+    ← Natrag na članove
+  </button>
+
+  <img
+    class="profile-car"
+    src="IMG_5436.jpeg"
+    alt="VW Golf 4">
+
+  <div class="tag">AK CARS FOR FUN MEMBER</div>
+
+  <h2 class="profile-name">Željko</h2>
+
+  <div class="profile-car-name">
+    VOLKSWAGEN GOLF 4
+  </div>
+
+  <div class="spec-grid">
+
+    <div class="spec">
+      <small>GODIŠTE</small>
+      <strong>1998.</strong>
+    </div>
+
+    <div class="spec">
+      <small>MOTOR</small>
+      <strong>1.9 TDI</strong>
+    </div>
+
+    <div class="spec">
+      <small>SNAGA</small>
+      <strong>150 KS</strong>
+    </div>
+
+    <div class="spec">
+      <small>FELGE</small>
+      <strong>Ispiri 18"</strong>
+    </div>
+
+  </div>
+
+  <div class="card">
+
+    <span class="card-label">MODIFIKACIJE</span>
+
+    <div class="mods">
+
+      <span class="mod">Stage 1</span>
+      <span class="mod">Downpipe</span>
+      <span class="mod">Gljiva</span>
+      <span class="mod">Gewinde</span>
+      <span class="mod">Smoke farovi</span>
+      <span class="mod">Prednji Jubi lip</span>
+      <span class="mod">Zadnji Jubi lip</span>
+      <span class="mod">Recaro sjedala</span>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- GARAŽA -->
+
 <section id="garage" class="page">
+
   <div class="tag">DIGITALNA GARAŽA</div>
+
   <h2>Garaža</h2>
 
   <p class="intro">
     Automobili članova AK Cars for Fun.
   </p>
 
-  <div class="empty">
-    <div class="empty-icon">🏁</div>
-    Automobili uskoro dolaze u garažu.
+  <div class="card clickable" onclick="showPage('zeljko')">
+
+    <img
+      class="member-car"
+      src="IMG_5436.jpeg"
+      alt="VW Golf 4">
+
+    <span class="card-label">VW</span>
+
+    <h3>Golf 4</h3>
+
+    <p>
+      1998. • 1.9 TDI • 150 KS<br>
+      Vlasnik: Željko
+    </p>
+
   </div>
+
 </section>
 
 
+<!-- MEETOVI -->
+
 <section id="meets" class="page">
+
   <div class="tag">AKCF EVENTS</div>
+
   <h2>Meetovi</h2>
 
   <p class="intro">
@@ -235,30 +407,45 @@ nav button.active{color:#ef3d3d}
   </p>
 
   <div class="empty">
-    <div class="empty-icon">📍</div>
+    📍<br><br>
     Trenutno nema objavljenog sljedećeg meeta.
   </div>
+
 </section>
 
 
+<!-- GALERIJA -->
+
 <section id="gallery" class="page">
+
   <div class="tag">AKCF MEDIA</div>
+
   <h2>Galerija</h2>
 
   <p class="intro">
     Fotografije automobila, meetova i naše ekipe.
   </p>
 
-  <div class="empty">
-    <div class="empty-icon">📸</div>
-    Fotografije ćemo dodati ovdje.
+  <div class="card">
+
+    <img
+      class="member-car"
+      src="IMG_5436.jpeg"
+      alt="VW Golf 4">
+
+    <span class="card-label">ŽELJKO</span>
+
+    <h3>VW Golf 4</h3>
+
   </div>
+
 </section>
 
 </main>
 
 
 <nav>
+
 <button class="active" onclick="showPage('home',this)">
   <span class="nav-icon">⌂</span>
   POČETNA
@@ -283,11 +470,14 @@ nav button.active{color:#ef3d3d}
   <span class="nav-icon">▦</span>
   GALERIJA
 </button>
+
 </nav>
 
 
 <script>
-function showPage(pageId, button){
+
+function showPage(pageId,button){
+
   document.querySelectorAll('.page').forEach(function(page){
     page.classList.remove('active');
   });
@@ -300,16 +490,11 @@ function showPage(pageId, button){
 
   if(button){
     button.classList.add('active');
-  } else {
-    document.querySelectorAll('nav button').forEach(function(btn){
-      if(btn.getAttribute('onclick').includes("'" + pageId + "'")){
-        btn.classList.add('active');
-      }
-    });
   }
 
   window.scrollTo(0,0);
 }
+
 </script>
 
 </body>
