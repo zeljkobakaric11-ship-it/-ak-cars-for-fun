@@ -1,13 +1,8 @@
 <!DOCTYPE html>
 <html lang="hr">
-
 <head>
-
 <meta charset="UTF-8">
-
-<meta name="viewport"
-content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <meta name="theme-color" content="#080808">
 
 <title>AK Cars for Fun</title>
@@ -20,6 +15,10 @@ content="width=device-width, initial-scale=1.0, viewport-fit=cover">
   padding: 0;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background: #080808;
   color: #f5f5f5;
@@ -27,31 +26,84 @@ body {
   min-height: 100vh;
 }
 
+
+/* HEADER */
+
 header {
-  padding: 14px 20px;
+  padding: 14px 12px;
   border-bottom: 1px solid #242424;
   background: #080808;
 }
 
+.header-inner {
+  max-width: 700px;
+  margin: auto;
+  min-height: 105px;
+
+  display: grid;
+  grid-template-columns: 1fr 105px 1fr;
+  align-items: center;
+}
+
 .club-logo {
   display: block;
+
   width: 105px;
   height: 105px;
+
   object-fit: cover;
   object-position: center;
+
   margin: 0 auto;
+
   border-radius: 50%;
 }
+
+.instagram-tag {
+  justify-self: start;
+
+  color: #B88746;
+
+  text-decoration: none;
+
+  font-size: 11px;
+  font-weight: 800;
+
+  letter-spacing: .3px;
+
+  white-space: nowrap;
+
+  transition:
+    color .2s ease,
+    transform .2s ease;
+}
+
+.header-space {
+  width: 100%;
+}
+
+
+/* COLORS */
 
 .gold {
   color: #B88746;
 }
 
+
+/* MAIN */
+
 main {
   max-width: 700px;
   margin: auto;
-  padding: 38px 20px 125px;
+
+  padding:
+    38px
+    20px
+    125px;
 }
+
+
+/* PAGES */
 
 .page {
   display: none;
@@ -59,42 +111,71 @@ main {
 
 .page.active {
   display: block;
+
+  animation:
+    pageIn .22s ease-out;
 }
+
+
+/* TEXT */
 
 .tag {
   color: #B88746;
+
   font-size: 12px;
   font-weight: 900;
+
   letter-spacing: 3px;
+
   margin-bottom: 18px;
 }
 
 h1 {
   font-size: clamp(45px, 13vw, 75px);
+
   line-height: .92;
+
   text-transform: uppercase;
+
   letter-spacing: -3px;
+
   margin-bottom: 25px;
 }
 
 h2 {
   font-size: 36px;
+
   margin-bottom: 12px;
 }
 
 .intro {
   color: #999;
+
   font-size: 17px;
+
   line-height: 1.6;
+
   margin-bottom: 32px;
 }
 
+
+/* CARDS */
+
 .card {
   background: #121212;
+
   border: 1px solid #292929;
+
   border-radius: 18px;
+
   padding: 22px;
+
   margin-bottom: 16px;
+
+  transition:
+    transform .2s ease,
+    border-color .2s ease,
+    box-shadow .2s ease;
 }
 
 .clickable {
@@ -103,68 +184,114 @@ h2 {
 
 .card-label {
   color: #B88746;
+
   font-size: 12px;
+
   font-weight: 900;
+
   letter-spacing: 2px;
 }
 
 .card h3 {
   font-size: 23px;
+
   margin: 9px 0;
 }
 
 .card p {
   color: #999;
+
   line-height: 1.5;
 }
 
+
+/* CAR IMAGES */
+
 .member-car {
   width: 100%;
+
   height: 190px;
+
   object-fit: cover;
+
   border-radius: 14px;
+
   margin-bottom: 18px;
+
+  transition:
+    transform .25s ease;
 }
 
 .profile-car {
   width: 100%;
+
   height: 280px;
+
   object-fit: cover;
+
   border-radius: 18px;
+
   margin-bottom: 22px;
+
+  transition:
+    transform .25s ease;
 }
+
+.gallery-image {
+  cursor: zoom-in;
+}
+
+
+/* PROFILE */
 
 .profile-name {
   font-size: 40px;
+
   margin-bottom: 4px;
 }
 
 .profile-car-name {
   color: #B88746;
+
   font-size: 20px;
+
   font-weight: 800;
+
   margin-bottom: 28px;
 }
 
+
+/* SPECS */
+
 .spec-grid {
   display: grid;
+
   grid-template-columns: 1fr 1fr;
+
   gap: 10px;
+
   margin-bottom: 16px;
 }
 
 .spec {
   background: #121212;
+
   border: 1px solid #292929;
+
   border-radius: 14px;
+
   padding: 16px;
 }
 
 .spec small {
   display: block;
+
   color: #777;
+
   font-size: 10px;
+
   letter-spacing: 2px;
+
   margin-bottom: 7px;
 }
 
@@ -172,62 +299,115 @@ h2 {
   font-size: 17px;
 }
 
+
+/* MODIFICATIONS */
+
 .mods {
   display: flex;
+
   flex-wrap: wrap;
+
   gap: 8px;
+
   margin-top: 15px;
 }
 
 .mod {
   background: #1d1d1d;
+
   border: 1px solid #3a3025;
+
   border-radius: 30px;
+
   padding: 9px 13px;
+
   font-size: 13px;
 }
 
+
+/* BACK */
+
 .back {
   border: 0;
+
   background: none;
+
   color: #B88746;
+
   font-size: 15px;
+
   font-weight: bold;
+
   margin-bottom: 25px;
+
   padding: 0;
+
+  transition:
+    transform .2s ease,
+    opacity .2s ease;
 }
+
+
+/* EMPTY */
 
 .empty {
   text-align: center;
+
   padding: 45px 20px;
+
   border: 1px dashed #3a3025;
+
   border-radius: 18px;
+
   color: #777;
 }
 
+
+/* NAVIGATION */
+
 nav {
   position: fixed;
+
   left: 0;
   right: 0;
   bottom: 0;
+
   min-height: 82px;
-  padding-bottom: env(safe-area-inset-bottom);
+
+  padding-bottom:
+    env(safe-area-inset-bottom);
+
   background: rgba(8,8,8,.97);
+
   border-top: 1px solid #292929;
+
   display: flex;
+
   align-items: flex-start;
+
   justify-content: space-around;
+
   z-index: 999;
 }
 
 nav button {
   width: 20%;
+
   padding: 13px 2px 8px;
+
   border: 0;
+
   background: none;
+
   color: #777;
+
   font-weight: 800;
+
   font-size: 10px;
+
+  transition:
+    color .2s ease,
+    transform .2s ease;
 }
 
 nav button.active {
@@ -236,773 +416,1217 @@ nav button.active {
 
 .nav-icon {
   display: block;
+
   font-size: 22px;
+
   height: 28px;
 }
 
-</style>
 
+/* PAGE ANIMATION */
+
+@keyframes pageIn {
+
+  from {
+    opacity: 0;
+
+    transform:
+      translateY(5px);
+  }
+
+  to {
+    opacity: 1;
+
+    transform:
+      translateY(0);
+  }
+
+}
+
+
+/* LIGHTBOX */
+
+.lightbox {
+  position: fixed;
+
+  inset: 0;
+
+  background: rgba(0,0,0,.94);
+
+  display: none;
+
+  align-items: center;
+
+  justify-content: center;
+
+  padding: 20px;
+
+  z-index: 9999;
+
+  opacity: 0;
+
+  transition:
+    opacity .2s ease;
+}
+
+.lightbox.active {
+  display: flex;
+
+  opacity: 1;
+}
+
+.lightbox img {
+  max-width: 95vw;
+
+  max-height: 88vh;
+
+  object-fit: contain;
+
+  border-radius: 14px;
+
+  box-shadow:
+    0 15px 45px
+    rgba(0,0,0,.5);
+
+  animation:
+    zoomIn .2s ease-out;
+}
+
+.lightbox-close {
+  position: absolute;
+
+  top: 18px;
+  right: 20px;
+
+  width: 44px;
+  height: 44px;
+
+  border: 1px solid #444;
+
+  border-radius: 50%;
+
+  background: #111;
+
+  color: #fff;
+
+  font-size: 26px;
+
+  line-height: 1;
+
+  cursor: pointer;
+
+  transition:
+    color .2s ease,
+    border-color .2s ease;
+}
+
+
+/* LIGHTBOX ANIMATION */
+
+@keyframes zoomIn {
+
+  from {
+    transform: scale(.97);
+
+    opacity: 0;
+  }
+
+  to {
+    transform: scale(1);
+
+    opacity: 1;
+  }
+
+}
+
+
+/* DESKTOP HOVER */
+
+@media (hover:hover) and (pointer:fine) {
+
+  .card.clickable:hover {
+    transform: translateY(-3px);
+
+    border-color: #B88746;
+
+    box-shadow:
+      0 8px 22px
+      rgba(184,135,70,.08);
+  }
+
+  .card.clickable:hover .member-car {
+    transform: scale(1.015);
+  }
+
+  nav button:hover {
+    color: #B88746;
+  }
+
+  .back:hover {
+    color: #B88746;
+
+    transform:
+      translateX(-3px);
+  }
+
+  .lightbox-close:hover {
+    color: #B88746;
+
+    border-color: #B88746;
+  }
+
+  .instagram-tag:hover {
+    color: #f5f5f5;
+
+    transform:
+      translateX(2px);
+  }
+
+}
+
+
+/* MOBILE TOUCH */
+
+@media (hover:none) {
+
+  .card.clickable:active {
+    transform: scale(.985);
+
+    border-color: #B88746;
+  }
+
+  nav button:active {
+    transform: scale(.94);
+  }
+
+}
+
+
+/* REDUCED MOTION */
+
+@media (prefers-reduced-motion:reduce) {
+
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+
+    animation-duration: .01ms !important;
+
+    animation-iteration-count: 1 !important;
+
+    transition-duration: .01ms !important;
+  }
+
+}
+
+
+/* SMALL PHONES */
+
+@media (max-width: 380px) {
+
+  .header-inner {
+    grid-template-columns:
+      1fr 90px 1fr;
+  }
+
+  .club-logo {
+    width: 90px;
+    height: 90px;
+  }
+
+  .instagram-tag {
+    font-size: 9px;
+  }
+
+}
+
+</style>
 </head>
+
 
 <body>
 
+
+<!-- HEADER -->
+
 <header>
 
-<img
-src="e84c0824-972f-4a99-8f85-993ec35e1e10.jpeg"
-alt="AK Cars for Fun"
-class="club-logo">
+  <div class="header-inner">
+
+    <a
+      class="instagram-tag"
+      href="https://www.instagram.com/cars_for_fun_official/"
+      target="_blank"
+      rel="noopener noreferrer">
+
+      @cars_for_fun_official
+
+    </a>
+
+
+    <img
+      src="e84c0824-972f-4a99-8f85-993ec35e1e10.jpeg"
+      alt="AK Cars for Fun"
+      class="club-logo">
+
+
+    <div class="header-space"></div>
+
+  </div>
 
 </header>
+
 
 
 <main>
 
 
-<!-- POČETNA -->
+<!-- HOME -->
 
-<section id="home" class="page active">
+<section
+  id="home"
+  class="page active">
 
-<div class="tag">
-ZAGREB / HRVATSKA — AKCF
-</div>
-
-<h1>
-VIŠE OD<br>
-<span class="gold">AUTOMOBILA.</span>
-</h1>
-
-<p class="intro">
-Dobrodošli u digitalnu garažu AK Cars for Fun.
-Članovi, automobili, meetovi i priče naše ekipe
-na jednom mjestu.
-</p>
-
-<div class="card clickable"
-onclick="showPage('members')">
-
-<span class="card-label">
-ČLANOVI
-</span>
-
-<h3>
-Naša ekipa →
-</h3>
-
-<p>
-Upoznaj članove i automobile koje voze.
-</p>
-
-</div>
-
-<div class="card clickable"
-onclick="showPage('garage')">
-
-<span class="card-label">
-GARAŽA
-</span>
-
-<h3>
-Naši automobili →
-</h3>
-
-<p>
-Pogledaj projekte AK Cars for Fun ekipe.
-</p>
-
-</div>
-
-</section>
+  <div class="tag">
+    ZAGREB / HRVATSKA — AKCF
+  </div>
 
 
-<!-- ČLANOVI -->
-
-<section id="members" class="page">
-
-<div class="tag">
-AK CARS FOR FUN
-</div>
-
-<h2>
-Članovi
-</h2>
-
-<p class="intro">
-Ljudi iza automobila. Upoznaj našu ekipu i njihove projekte.
-</p>
+  <h1>
+    VIŠE OD<br>
+    <span class="gold">
+      AUTOMOBILA.
+    </span>
+  </h1>
 
 
-<!-- ŽELJKO -->
-
-<div class="card clickable"
-onclick="showPage('zeljko')">
-
-<img
-class="member-car"
-src="IMG_5436.jpeg"
-alt="Željko VW Golf 4">
-
-<span class="card-label">
-ČLAN
-</span>
-
-<h3>
-Željko
-</h3>
-
-<p>
-VW Golf 4 • 1998.<br>
-1.9 TDI • 150 KS
-</p>
-
-</div>
+  <p class="intro">
+    Dobrodošli u digitalnu garažu AK Cars for Fun.
+    Članovi, automobili, meetovi i priče naše ekipe
+    na jednom mjestu.
+  </p>
 
 
-<!-- KRISTIJAN -->
+  <div
+    class="card clickable"
+    onclick="showPage('members')">
 
-<div class="card clickable"
-onclick="showPage('kristijan')">
+    <span class="card-label">
+      ČLANOVI
+    </span>
 
-<img
-class="member-car"
-src="IMG_5511.jpeg"
-alt="Kristijan SEAT Leon FR">
+    <h3>
+      Naša ekipa →
+    </h3>
 
-<span class="card-label">
-ČLAN
-</span>
+    <p>
+      Upoznaj članove i automobile koje voze.
+    </p>
 
-<h3>
-Kristijan
-</h3>
-
-<p>
-SEAT Leon FR • 2014.<br>
-2.0 TDI • 184 KS
-</p>
-
-</div>
+  </div>
 
 
-<!-- IVAN -->
+  <div
+    class="card clickable"
+    onclick="showPage('garage')">
 
-<div class="card clickable"
-onclick="showPage('ivan')">
+    <span class="card-label">
+      GARAŽA
+    </span>
 
-<img
-class="member-car"
-src="E3DAC88B-872D-42EB-A552-9F9FBBA08405.jpeg"
-alt="Ivan Mercedes-Benz C-klasa Coupé">
+    <h3>
+      Naši automobili →
+    </h3>
 
-<span class="card-label">
-ČLAN
-</span>
+    <p>
+      Pogledaj projekte AK Cars for Fun ekipe.
+    </p>
 
-<h3>
-Ivan
-</h3>
-
-<p>
-Mercedes-Benz C-klasa Coupé • 2012.<br>
-220 CDI • 220 KS
-</p>
-
-</div>
-
-
-<!-- LEON -->
-
-<div class="card clickable"
-onclick="showPage('leon')">
-
-<img
-class="member-car"
-src="IMG_0088.jpeg"
-alt="Leon VW Passat B5.5">
-
-<span class="card-label">
-ČLAN
-</span>
-
-<h3>
-Leon
-</h3>
-
-<p>
-VW Passat B5.5 • 2001.<br>
-1.9 TDI • 130 KS
-</p>
-
-</div>
+  </div>
 
 </section>
 
 
-<!-- ŽELJKO -->
 
-<section id="zeljko" class="page">
+<!-- MEMBERS -->
 
-<button class="back"
-onclick="showPage('members')">
-← Natrag na članove
-</button>
+<section
+  id="members"
+  class="page">
 
-<img
-class="profile-car"
-src="IMG_5436.jpeg"
-alt="VW Golf 4">
+  <div class="tag">
+    AK CARS FOR FUN
+  </div>
 
-<div class="tag">
-AK CARS FOR FUN MEMBER
-</div>
+  <h2>
+    Članovi
+  </h2>
 
-<h2 class="profile-name">
-Željko
-</h2>
-
-<div class="profile-car-name">
-VOLKSWAGEN GOLF 4
-</div>
-
-<div class="spec-grid">
-
-<div class="spec">
-<small>GODIŠTE</small>
-<strong>1998.</strong>
-</div>
-
-<div class="spec">
-<small>MOTOR</small>
-<strong>1.9 TDI</strong>
-</div>
-
-<div class="spec">
-<small>SNAGA</small>
-<strong>150 KS</strong>
-</div>
-
-<div class="spec">
-<small>FELGE</small>
-<strong>Ispiri 18"</strong>
-</div>
-
-</div>
-
-<div class="card">
-
-<span class="card-label">
-MODIFIKACIJE
-</span>
-
-<div class="mods">
-
-<span class="mod">Stage 1</span>
-<span class="mod">Downpipe</span>
-<span class="mod">Gljiva</span>
-<span class="mod">Gewinde</span>
-<span class="mod">Smoke farovi</span>
-<span class="mod">Prednji Jubi lip</span>
-<span class="mod">Zadnji Jubi lip</span>
-<span class="mod">Recaro sjedala</span>
-
-</div>
-
-</div>
-
-</section>
+  <p class="intro">
+    Ljudi iza automobila. Upoznaj našu ekipu i njihove projekte.
+  </p>
 
 
-<!-- KRISTIJAN -->
+  <!-- ZELJKO -->
 
-<section id="kristijan" class="page">
+  <div
+    class="card clickable"
+    onclick="showPage('zeljko')">
 
-<button class="back"
-onclick="showPage('members')">
-← Natrag na članove
-</button>
+    <img
+      class="member-car"
+      src="IMG_5436.jpeg"
+      alt="Željko VW Golf 4">
 
-<img
-class="profile-car"
-src="IMG_5511.jpeg"
-alt="SEAT Leon FR">
+    <span class="card-label">
+      ČLAN
+    </span>
 
-<div class="tag">
-AK CARS FOR FUN MEMBER
-</div>
+    <h3>
+      Željko
+    </h3>
 
-<h2 class="profile-name">
-Kristijan
-</h2>
+    <p>
+      VW Golf 4 • 1998.<br>
+      1.9 TDI • 150 KS
+    </p>
 
-<div class="profile-car-name">
-SEAT LEON FR
-</div>
+  </div>
 
-<div class="spec-grid">
 
-<div class="spec">
-<small>GODIŠTE</small>
-<strong>2014.</strong>
-</div>
+  <!-- KRISTIJAN -->
 
-<div class="spec">
-<small>MOTOR</small>
-<strong>2.0 TDI</strong>
-</div>
+  <div
+    class="card clickable"
+    onclick="showPage('kristijan')">
 
-<div class="spec">
-<small>SNAGA</small>
-<strong>184 KS</strong>
-</div>
+    <img
+      class="member-car"
+      src="IMG_5511.jpeg"
+      alt="Kristijan SEAT Leon FR">
 
-<div class="spec">
-<small>FELGE</small>
-<strong>Motec</strong>
-</div>
+    <span class="card-label">
+      ČLAN
+    </span>
 
-</div>
+    <h3>
+      Kristijan
+    </h3>
 
-<div class="card">
+    <p>
+      SEAT Leon FR • 2014.<br>
+      2.0 TDI • 184 KS
+    </p>
 
-<span class="card-label">
-MODIFIKACIJE
-</span>
+  </div>
 
-<div class="mods">
 
-<span class="mod">AP gewinde</span>
-<span class="mod">Maxton prednji lip</span>
-<span class="mod">Maxton zadnji lip</span>
-<span class="mod">Rieger spojler + lip</span>
-<span class="mod">4. stop svjetlo</span>
-<span class="mod">Litec štopovi</span>
-<span class="mod">RGB DRL moduli</span>
-<span class="mod">Custom obloga volana</span>
-<span class="mod">Golf R shifter</span>
+  <!-- IVAN -->
 
-</div>
+  <div
+    class="card clickable"
+    onclick="showPage('ivan')">
 
-</div>
+    <img
+      class="member-car"
+      src="E3DAC88B-872D-42EB-A552-9F9FBBA08405.jpeg"
+      alt="Ivan Mercedes-Benz C-klasa Coupé">
+
+    <span class="card-label">
+      ČLAN
+    </span>
+
+    <h3>
+      Ivan
+    </h3>
+
+    <p>
+      Mercedes-Benz C-klasa Coupé • 2012.<br>
+      220 CDI • 220 KS
+    </p>
+
+  </div>
+
+
+  <!-- LEON -->
+
+  <div
+    class="card clickable"
+    onclick="showPage('leon')">
+
+    <img
+      class="member-car"
+      src="IMG_0088.jpeg"
+      alt="Leon VW Passat B5.5">
+
+    <span class="card-label">
+      ČLAN
+    </span>
+
+    <h3>
+      Leon
+    </h3>
+
+    <p>
+      VW Passat B5.5 • 2001.<br>
+      1.9 TDI • 130 KS
+    </p>
+
+  </div>
 
 </section>
 
 
-<!-- IVAN -->
 
-<section id="ivan" class="page">
+<!-- ZELJKO PROFILE -->
 
-<button class="back"
-onclick="showPage('members')">
-← Natrag na članove
-</button>
+<section
+  id="zeljko"
+  class="page">
 
-<img
-class="profile-car"
-src="E3DAC88B-872D-42EB-A552-9F9FBBA08405.jpeg"
-alt="Mercedes-Benz C-klasa Coupé">
+  <button
+    class="back"
+    onclick="showPage('members')">
 
-<div class="tag">
-AK CARS FOR FUN MEMBER
-</div>
+    ← Natrag na članove
 
-<h2 class="profile-name">
-Ivan
-</h2>
-
-<div class="profile-car-name">
-MERCEDES-BENZ C-KLASA COUPÉ
-</div>
-
-<div class="spec-grid">
-
-<div class="spec">
-<small>GODIŠTE</small>
-<strong>2012.</strong>
-</div>
-
-<div class="spec">
-<small>MOTOR</small>
-<strong>220 CDI</strong>
-</div>
-
-<div class="spec">
-<small>SNAGA</small>
-<strong>220 KS</strong>
-</div>
-
-</div>
-
-</section>
+  </button>
 
 
-<!-- LEON -->
-
-<section id="leon" class="page">
-
-<button class="back"
-onclick="showPage('members')">
-← Natrag na članove
-</button>
-
-<img
-class="profile-car"
-src="IMG_0088.jpeg"
-alt="VW Passat B5.5">
-
-<div class="tag">
-AK CARS FOR FUN MEMBER
-</div>
-
-<h2 class="profile-name">
-Leon
-</h2>
-
-<div class="profile-car-name">
-VOLKSWAGEN PASSAT B5.5
-</div>
-
-<div class="spec-grid">
-
-<div class="spec">
-<small>GODIŠTE</small>
-<strong>2001.</strong>
-</div>
-
-<div class="spec">
-<small>MOTOR</small>
-<strong>1.9 TDI</strong>
-</div>
-
-<div class="spec">
-<small>SNAGA</small>
-<strong>130 KS</strong>
-</div>
-
-<div class="spec">
-<small>FELGE</small>
-<strong>VW felge</strong>
-</div>
-
-</div>
-
-</section>
+  <img
+    class="profile-car"
+    src="IMG_5436.jpeg"
+    alt="VW Golf 4">
 
 
-<!-- GARAŽA -->
-
-<section id="garage" class="page">
-
-<div class="tag">
-DIGITALNA GARAŽA
-</div>
-
-<h2>
-Garaža
-</h2>
-
-<p class="intro">
-Automobili članova AK Cars for Fun.
-</p>
+  <div class="tag">
+    AK CARS FOR FUN MEMBER
+  </div>
 
 
-<div class="card clickable"
-onclick="showPage('zeljko')">
-
-<img
-class="member-car"
-src="IMG_5436.jpeg"
-alt="VW Golf 4">
-
-<span class="card-label">
-VOLKSWAGEN
-</span>
-
-<h3>
-Golf 4
-</h3>
-
-<p>
-1998. • 1.9 TDI • 150 KS<br>
-Vlasnik: Željko
-</p>
-
-</div>
+  <h2 class="profile-name">
+    Željko
+  </h2>
 
 
-<div class="card clickable"
-onclick="showPage('kristijan')">
-
-<img
-class="member-car"
-src="IMG_5511.jpeg"
-alt="SEAT Leon FR">
-
-<span class="card-label">
-SEAT
-</span>
-
-<h3>
-Leon FR
-</h3>
-
-<p>
-2014. • 2.0 TDI • 184 KS<br>
-Vlasnik: Kristijan
-</p>
-
-</div>
+  <div class="profile-car-name">
+    VOLKSWAGEN GOLF 4
+  </div>
 
 
-<div class="card clickable"
-onclick="showPage('ivan')">
+  <div class="spec-grid">
 
-<img
-class="member-car"
-src="E3DAC88B-872D-42EB-A552-9F9FBBA08405.jpeg"
-alt="Mercedes-Benz C-klasa Coupé">
+    <div class="spec">
+      <small>GODIŠTE</small>
+      <strong>1998.</strong>
+    </div>
 
-<span class="card-label">
-MERCEDES-BENZ
-</span>
+    <div class="spec">
+      <small>MOTOR</small>
+      <strong>1.9 TDI</strong>
+    </div>
 
-<h3>
-C-klasa Coupé
-</h3>
+    <div class="spec">
+      <small>SNAGA</small>
+      <strong>150 KS</strong>
+    </div>
 
-<p>
-2012. • 220 CDI • 220 KS<br>
-Vlasnik: Ivan
-</p>
+    <div class="spec">
+      <small>FELGE</small>
+      <strong>Ispiri 18"</strong>
+    </div>
 
-</div>
+  </div>
 
 
-<div class="card clickable"
-onclick="showPage('leon')">
+  <div class="card">
 
-<img
-class="member-car"
-src="IMG_0088.jpeg"
-alt="VW Passat B5.5">
+    <span class="card-label">
+      MODIFIKACIJE
+    </span>
 
-<span class="card-label">
-VOLKSWAGEN
-</span>
 
-<h3>
-Passat B5.5
-</h3>
+    <div class="mods">
 
-<p>
-2001. • 1.9 TDI • 130 KS<br>
-Vlasnik: Leon
-</p>
+      <span class="mod">
+        Stage 1
+      </span>
 
-</div>
+      <span class="mod">
+        Downpipe
+      </span>
+
+      <span class="mod">
+        Gljiva
+      </span>
+
+      <span class="mod">
+        Gewinde
+      </span>
+
+      <span class="mod">
+        Smoke farovi
+      </span>
+
+      <span class="mod">
+        Prednji Jubi lip
+      </span>
+
+      <span class="mod">
+        Zadnji Jubi lip
+      </span>
+
+      <span class="mod">
+        Recaro sjedala
+      </span>
+
+    </div>
+
+  </div>
 
 </section>
 
 
-<!-- MEETOVI -->
 
-<section id="meets" class="page">
+<!-- KRISTIJAN PROFILE -->
 
-<div class="tag">
-AKCF EVENTS
-</div>
+<section
+  id="kristijan"
+  class="page">
 
-<h2>
-Meetovi
-</h2>
+  <button
+    class="back"
+    onclick="showPage('members')">
 
-<p class="intro">
-Okupljanja, vožnje i događanja AK Cars for Fun ekipe.
-</p>
+    ← Natrag na članove
 
-<div class="empty">
+  </button>
 
-📍
 
-<br><br>
+  <img
+    class="profile-car"
+    src="IMG_5511.jpeg"
+    alt="SEAT Leon FR">
 
-Trenutno nema objavljenog sljedećeg meeta.
 
-</div>
+  <div class="tag">
+    AK CARS FOR FUN MEMBER
+  </div>
+
+
+  <h2 class="profile-name">
+    Kristijan
+  </h2>
+
+
+  <div class="profile-car-name">
+    SEAT LEON FR
+  </div>
+
+
+  <div class="spec-grid">
+
+    <div class="spec">
+      <small>GODIŠTE</small>
+      <strong>2014.</strong>
+    </div>
+
+    <div class="spec">
+      <small>MOTOR</small>
+      <strong>2.0 TDI</strong>
+    </div>
+
+    <div class="spec">
+      <small>SNAGA</small>
+      <strong>184 KS</strong>
+    </div>
+
+    <div class="spec">
+      <small>FELGE</small>
+      <strong>Motec</strong>
+    </div>
+
+  </div>
+
+
+  <div class="card">
+
+    <span class="card-label">
+      MODIFIKACIJE
+    </span>
+
+
+    <div class="mods">
+
+      <span class="mod">
+        AP gewinde
+      </span>
+
+      <span class="mod">
+        Maxton prednji lip
+      </span>
+
+      <span class="mod">
+        Maxton zadnji lip
+      </span>
+
+      <span class="mod">
+        Rieger spojler + lip
+      </span>
+
+      <span class="mod">
+        4. stop svjetlo
+      </span>
+
+      <span class="mod">
+        Litec štopovi
+      </span>
+
+      <span class="mod">
+        RGB DRL moduli
+      </span>
+
+      <span class="mod">
+        Custom obloga volana
+      </span>
+
+      <span class="mod">
+        Golf R shifter
+      </span>
+
+    </div>
+
+  </div>
 
 </section>
 
 
-<!-- GALERIJA -->
 
-<section id="gallery" class="page">
+<!-- IVAN PROFILE -->
 
-<div class="tag">
-AKCF MEDIA
-</div>
+<section
+  id="ivan"
+  class="page">
 
-<h2>
-Galerija
-</h2>
+  <button
+    class="back"
+    onclick="showPage('members')">
 
-<p class="intro">
-Fotografije automobila, meetova i naše ekipe.
-</p>
+    ← Natrag na članove
 
-
-<div class="card clickable"
-onclick="showPage('zeljko')">
-
-<img
-class="member-car"
-src="IMG_5436.jpeg"
-alt="VW Golf 4">
-
-<span class="card-label">
-ŽELJKO
-</span>
-
-<h3>
-VW Golf 4
-</h3>
-
-</div>
+  </button>
 
 
-<div class="card clickable"
-onclick="showPage('kristijan')">
-
-<img
-class="member-car"
-src="IMG_5511.jpeg"
-alt="SEAT Leon FR">
-
-<span class="card-label">
-KRISTIJAN
-</span>
-
-<h3>
-SEAT Leon FR
-</h3>
-
-</div>
+  <img
+    class="profile-car"
+    src="E3DAC88B-872D-42EB-A552-9F9FBBA08405.jpeg"
+    alt="Mercedes-Benz C-klasa Coupé">
 
 
-<div class="card clickable"
-onclick="showPage('ivan')">
-
-<img
-class="member-car"
-src="E3DAC88B-872D-42EB-A552-9F9FBBA08405.jpeg"
-alt="Mercedes-Benz C-klasa Coupé">
-
-<span class="card-label">
-IVAN
-</span>
-
-<h3>
-Mercedes-Benz C-klasa Coupé
-</h3>
-
-</div>
+  <div class="tag">
+    AK CARS FOR FUN MEMBER
+  </div>
 
 
-<div class="card clickable"
-onclick="showPage('leon')">
+  <h2 class="profile-name">
+    Ivan
+  </h2>
 
-<img
-class="member-car"
-src="IMG_0088.jpeg"
-alt="VW Passat B5.5">
 
-<span class="card-label">
-LEON
-</span>
+  <div class="profile-car-name">
+    MERCEDES-BENZ C-KLASA COUPÉ
+  </div>
 
-<h3>
-VW Passat B5.5
-</h3>
 
-</div>
+  <div class="spec-grid">
+
+    <div class="spec">
+      <small>GODIŠTE</small>
+      <strong>2012.</strong>
+    </div>
+
+    <div class="spec">
+      <small>MOTOR</small>
+      <strong>220 CDI</strong>
+    </div>
+
+    <div class="spec">
+      <small>SNAGA</small>
+      <strong>220 KS</strong>
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- LEON PROFILE -->
+
+<section
+  id="leon"
+  class="page">
+
+  <button
+    class="back"
+    onclick="showPage('members')">
+
+    ← Natrag na članove
+
+  </button>
+
+
+  <img
+    class="profile-car"
+    src="IMG_0088.jpeg"
+    alt="VW Passat B5.5">
+
+
+  <div class="tag">
+    AK CARS FOR FUN MEMBER
+  </div>
+
+
+  <h2 class="profile-name">
+    Leon
+  </h2>
+
+
+  <div class="profile-car-name">
+    VOLKSWAGEN PASSAT B5.5
+  </div>
+
+
+  <div class="spec-grid">
+
+    <div class="spec">
+      <small>GODIŠTE</small>
+      <strong>2001.</strong>
+    </div>
+
+    <div class="spec">
+      <small>MOTOR</small>
+      <strong>1.9 TDI</strong>
+    </div>
+
+    <div class="spec">
+      <small>SNAGA</small>
+      <strong>130 KS</strong>
+    </div>
+
+    <div class="spec">
+      <small>FELGE</small>
+      <strong>VW felge</strong>
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- GARAGE -->
+
+<section
+  id="garage"
+  class="page">
+
+  <div class="tag">
+    DIGITALNA GARAŽA
+  </div>
+
+  <h2>
+    Garaža
+  </h2>
+
+  <p class="intro">
+    Automobili članova AK Cars for Fun.
+  </p>
+
+
+  <div
+    class="card clickable"
+    onclick="showPage('zeljko')">
+
+    <img
+      class="member-car"
+      src="IMG_5436.jpeg"
+      alt="VW Golf 4">
+
+    <span class="card-label">
+      VOLKSWAGEN
+    </span>
+
+    <h3>
+      Golf 4
+    </h3>
+
+    <p>
+      1998. • 1.9 TDI • 150 KS<br>
+      Vlasnik: Željko
+    </p>
+
+  </div>
+
+
+  <div
+    class="card clickable"
+    onclick="showPage('kristijan')">
+
+    <img
+      class="member-car"
+      src="IMG_5511.jpeg"
+      alt="SEAT Leon FR">
+
+    <span class="card-label">
+      SEAT
+    </span>
+
+    <h3>
+      Leon FR
+    </h3>
+
+    <p>
+      2014. • 2.0 TDI • 184 KS<br>
+      Vlasnik: Kristijan
+    </p>
+
+  </div>
+
+
+  <div
+    class="card clickable"
+    onclick="showPage('ivan')">
+
+    <img
+      class="member-car"
+      src="E3DAC88B-872D-42EB-A552-9F9FBBA08405.jpeg"
+      alt="Mercedes-Benz C-klasa Coupé">
+
+    <span class="card-label">
+      MERCEDES-BENZ
+    </span>
+
+    <h3>
+      C-klasa Coupé
+    </h3>
+
+    <p>
+      2012. • 220 CDI • 220 KS<br>
+      Vlasnik: Ivan
+    </p>
+
+  </div>
+
+
+  <div
+    class="card clickable"
+    onclick="showPage('leon')">
+
+    <img
+      class="member-car"
+      src="IMG_0088.jpeg"
+      alt="VW Passat B5.5">
+
+    <span class="card-label">
+      VOLKSWAGEN
+    </span>
+
+    <h3>
+      Passat B5.5
+    </h3>
+
+    <p>
+      2001. • 1.9 TDI • 130 KS<br>
+      Vlasnik: Leon
+    </p>
+
+  </div>
+
+</section>
+
+
+
+<!-- MEETS -->
+
+<section
+  id="meets"
+  class="page">
+
+  <div class="tag">
+    AKCF EVENTS
+  </div>
+
+  <h2>
+    Meetovi
+  </h2>
+
+  <p class="intro">
+    Okupljanja, vožnje i događanja AK Cars for Fun ekipe.
+  </p>
+
+
+  <div class="empty">
+
+    📍
+
+    <br><br>
+
+    Trenutno nema objavljenog sljedećeg meeta.
+
+  </div>
+
+</section>
+
+
+
+<!-- GALLERY -->
+
+<section
+  id="gallery"
+  class="page">
+
+  <div class="tag">
+    AKCF MEDIA
+  </div>
+
+  <h2>
+    Galerija
+  </h2>
+
+  <p class="intro">
+    Fotografije automobila, meetova i naše ekipe.
+  </p>
+
+
+  <!-- ZELJKO -->
+
+  <div
+    class="card clickable"
+    onclick="showPage('zeljko')">
+
+    <img
+      class="member-car gallery-image"
+      src="IMG_5436.jpeg"
+      alt="VW Golf 4"
+      onclick="event.stopPropagation(); openLightbox(this)">
+
+    <span class="card-label">
+      ŽELJKO
+    </span>
+
+    <h3>
+      VW Golf 4
+    </h3>
+
+  </div>
+
+
+  <!-- KRISTIJAN -->
+
+  <div
+    class="card clickable"
+    onclick="showPage('kristijan')">
+
+    <img
+      class="member-car gallery-image"
+      src="IMG_5511.jpeg"
+      alt="SEAT Leon FR"
+      onclick="event.stopPropagation(); openLightbox(this)">
+
+    <span class="card-label">
+      KRISTIJAN
+    </span>
+
+    <h3>
+      SEAT Leon FR
+    </h3>
+
+  </div>
+
+
+  <!-- IVAN -->
+
+  <div
+    class="card clickable"
+    onclick="showPage('ivan')">
+
+    <img
+      class="member-car gallery-image"
+      src="E3DAC88B-872D-42EB-A552-9F9FBBA08405.jpeg"
+      alt="Mercedes-Benz C-klasa Coupé"
+      onclick="event.stopPropagation(); openLightbox(this)">
+
+    <span class="card-label">
+      IVAN
+    </span>
+
+    <h3>
+      Mercedes-Benz C-klasa Coupé
+    </h3>
+
+  </div>
+
+
+  <!-- LEON -->
+
+  <div
+    class="card clickable"
+    onclick="showPage('leon')">
+
+    <img
+      class="member-car gallery-image"
+      src="IMG_0088.jpeg"
+      alt="VW Passat B5.5"
+      onclick="event.stopPropagation(); openLightbox(this)">
+
+    <span class="card-label">
+      LEON
+    </span>
+
+    <h3>
+      VW Passat B5.5
+    </h3>
+
+  </div>
 
 </section>
 
 </main>
 
 
-<!-- DONJI MENI -->
+
+<!-- BOTTOM NAV -->
 
 <nav>
 
-<button
-class="active"
-onclick="showPage('home',this)">
 
-<span class="nav-icon">⌂</span>
+  <button
+    class="active"
+    onclick="showPage('home',this)">
 
-POČETNA
+    <span class="nav-icon">
+      ⌂
+    </span>
 
-</button>
+    POČETNA
 
-
-<button
-onclick="showPage('members',this)">
-
-<span class="nav-icon">♙</span>
-
-ČLANOVI
-
-</button>
+  </button>
 
 
-<button
-onclick="showPage('garage',this)">
+  <button
+    onclick="showPage('members',this)">
 
-<span class="nav-icon">🚗</span>
+    <span class="nav-icon">
+      ♙
+    </span>
 
-GARAŽA
+    ČLANOVI
 
-</button>
-
-
-<button
-onclick="showPage('meets',this)">
-
-<span class="nav-icon">◆</span>
-
-MEETOVI
-
-</button>
+  </button>
 
 
-<button
-onclick="showPage('gallery',this)">
+  <button
+    onclick="showPage('garage',this)">
 
-<span class="nav-icon">▦</span>
+    <span class="nav-icon">
+      🚗
+    </span>
 
-GALERIJA
+    GARAŽA
 
-</button>
+  </button>
+
+
+  <button
+    onclick="showPage('meets',this)">
+
+    <span class="nav-icon">
+      ◆
+    </span>
+
+    MEETOVI
+
+  </button>
+
+
+  <button
+    onclick="showPage('gallery',this)">
+
+    <span class="nav-icon">
+      ▦
+    </span>
+
+    GALERIJA
+
+  </button>
+
 
 </nav>
 
 
+
+<!-- LIGHTBOX -->
+
+<div
+  id="lightbox"
+  class="lightbox"
+  onclick="closeLightbox(event)">
+
+
+  <button
+    class="lightbox-close"
+    onclick="closeLightbox()"
+    aria-label="Zatvori">
+
+    ×
+
+  </button>
+
+
+  <img
+    id="lightbox-image"
+    src=""
+    alt="Galerija">
+
+
+</div>
+
+
+
 <script>
+
+
+/* PAGE NAVIGATION */
 
 function showPage(pageId, button) {
 
-  document.querySelectorAll('.page').forEach(function(page) {
+  document
+    .querySelectorAll('.page')
+    .forEach(function(page) {
 
-    page.classList.remove('active');
+      page.classList.remove('active');
 
-  });
+    });
 
-  document.getElementById(pageId).classList.add('active');
 
-  document.querySelectorAll('nav button').forEach(function(btn) {
+  document
+    .getElementById(pageId)
+    .classList.add('active');
 
-    btn.classList.remove('active');
 
-  });
+  document
+    .querySelectorAll('nav button')
+    .forEach(function(btn) {
+
+      btn.classList.remove('active');
+
+    });
+
 
   if (button) {
 
@@ -1010,13 +1634,87 @@ function showPage(pageId, button) {
 
   }
 
+
   window.scrollTo(0, 0);
 
 }
+
+
+
+/* OPEN IMAGE */
+
+function openLightbox(image) {
+
+  const lightbox =
+    document.getElementById('lightbox');
+
+
+  const lightboxImage =
+    document.getElementById('lightbox-image');
+
+
+  lightboxImage.src =
+    image.src;
+
+
+  lightboxImage.alt =
+    image.alt;
+
+
+  lightbox.classList.add('active');
+
+
+  document.body.style.overflow =
+    'hidden';
+
+}
+
+
+
+/* CLOSE IMAGE */
+
+function closeLightbox(event) {
+
+  if (
+    event &&
+    event.target.id !== 'lightbox' &&
+    !event.target.classList.contains('lightbox-close')
+  ) {
+
+    return;
+
+  }
+
+
+  document
+    .getElementById('lightbox')
+    .classList.remove('active');
+
+
+  document.body.style.overflow =
+    '';
+
+}
+
+
+
+/* ESC KEY */
+
+document.addEventListener(
+  'keydown',
+  function(event) {
+
+    if (event.key === 'Escape') {
+
+      closeLightbox();
+
+    }
+
+  }
+);
 
 </script>
 
 
 </body>
-
 </html>
