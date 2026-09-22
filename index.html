@@ -26,7 +26,6 @@ body {
   min-height: 100vh;
 }
 
-
 /* HEADER */
 
 header {
@@ -39,7 +38,6 @@ header {
   max-width: 700px;
   margin: auto;
   min-height: 105px;
-
   display: grid;
   grid-template-columns: 1fr 105px 1fr;
   align-items: center;
@@ -47,41 +45,27 @@ header {
 
 .club-logo {
   display: block;
-
   width: 105px;
   height: 105px;
-
   object-fit: cover;
   object-position: center;
-
   margin: 0 auto;
-
   border-radius: 50%;
 }
 
 .instagram-tag {
   justify-self: start;
-
   color: #B88746;
-
   text-decoration: none;
-
   font-size: 11px;
   font-weight: 800;
-
   letter-spacing: .3px;
-
   white-space: nowrap;
-
-  transition:
-    color .2s ease,
-    transform .2s ease;
 }
 
 .header-space {
   width: 100%;
 }
-
 
 /* COLORS */
 
@@ -89,19 +73,13 @@ header {
   color: #B88746;
 }
 
-
 /* MAIN */
 
 main {
   max-width: 700px;
   margin: auto;
-
-  padding:
-    38px
-    20px
-    125px;
+  padding: 38px 20px 125px;
 }
-
 
 /* PAGES */
 
@@ -111,67 +89,47 @@ main {
 
 .page.active {
   display: block;
-
-  animation:
-    pageIn .22s ease-out;
+  animation: pageIn .22s ease-out;
 }
-
 
 /* TEXT */
 
 .tag {
   color: #B88746;
-
   font-size: 12px;
   font-weight: 900;
-
   letter-spacing: 3px;
-
   margin-bottom: 18px;
 }
 
 h1 {
   font-size: clamp(45px, 13vw, 75px);
-
   line-height: .92;
-
   text-transform: uppercase;
-
   letter-spacing: -3px;
-
   margin-bottom: 25px;
 }
 
 h2 {
   font-size: 36px;
-
   margin-bottom: 12px;
 }
 
 .intro {
   color: #999;
-
   font-size: 17px;
-
   line-height: 1.6;
-
   margin-bottom: 32px;
 }
-
 
 /* CARDS */
 
 .card {
   background: #121212;
-
   border: 1px solid #292929;
-
   border-radius: 18px;
-
   padding: 22px;
-
   margin-bottom: 16px;
-
   transition:
     transform .2s ease,
     border-color .2s ease,
@@ -184,114 +142,80 @@ h2 {
 
 .card-label {
   color: #B88746;
-
   font-size: 12px;
-
   font-weight: 900;
-
   letter-spacing: 2px;
 }
 
 .card h3 {
   font-size: 23px;
-
   margin: 9px 0;
 }
 
 .card p {
   color: #999;
-
   line-height: 1.5;
 }
-
 
 /* CAR IMAGES */
 
 .member-car {
   width: 100%;
-
   height: 190px;
-
   object-fit: cover;
-
   border-radius: 14px;
-
   margin-bottom: 18px;
-
-  transition:
-    transform .25s ease;
+  transition: transform .25s ease;
 }
 
 .profile-car {
   width: 100%;
-
   height: 280px;
-
   object-fit: cover;
-
   border-radius: 18px;
-
   margin-bottom: 22px;
-
-  transition:
-    transform .25s ease;
+  transition: transform .25s ease;
 }
 
 .gallery-image {
   cursor: zoom-in;
 }
 
-
 /* PROFILE */
 
 .profile-name {
   font-size: 40px;
-
   margin-bottom: 4px;
 }
 
 .profile-car-name {
   color: #B88746;
-
   font-size: 20px;
-
   font-weight: 800;
-
   margin-bottom: 28px;
 }
-
 
 /* SPECS */
 
 .spec-grid {
   display: grid;
-
   grid-template-columns: 1fr 1fr;
-
   gap: 10px;
-
   margin-bottom: 16px;
 }
 
 .spec {
   background: #121212;
-
   border: 1px solid #292929;
-
   border-radius: 14px;
-
   padding: 16px;
 }
 
 .spec small {
   display: block;
-
   color: #777;
-
   font-size: 10px;
-
   letter-spacing: 2px;
-
   margin-bottom: 7px;
 }
 
@@ -299,115 +223,71 @@ h2 {
   font-size: 17px;
 }
 
-
 /* MODIFICATIONS */
 
 .mods {
   display: flex;
-
   flex-wrap: wrap;
-
   gap: 8px;
-
   margin-top: 15px;
 }
 
 .mod {
   background: #1d1d1d;
-
   border: 1px solid #3a3025;
-
   border-radius: 30px;
-
   padding: 9px 13px;
-
   font-size: 13px;
 }
-
 
 /* BACK */
 
 .back {
   border: 0;
-
   background: none;
-
   color: #B88746;
-
   font-size: 15px;
-
   font-weight: bold;
-
   margin-bottom: 25px;
-
   padding: 0;
-
-  transition:
-    transform .2s ease,
-    opacity .2s ease;
+  cursor: pointer;
 }
-
 
 /* EMPTY */
 
 .empty {
   text-align: center;
-
   padding: 45px 20px;
-
   border: 1px dashed #3a3025;
-
   border-radius: 18px;
-
   color: #777;
 }
-
 
 /* NAVIGATION */
 
 nav {
   position: fixed;
-
   left: 0;
   right: 0;
   bottom: 0;
-
   min-height: 82px;
-
-  padding-bottom:
-    env(safe-area-inset-bottom);
-
+  padding-bottom: env(safe-area-inset-bottom);
   background: rgba(8,8,8,.97);
-
   border-top: 1px solid #292929;
-
   display: flex;
-
   align-items: flex-start;
-
   justify-content: space-around;
-
   z-index: 999;
 }
 
 nav button {
   width: 20%;
-
   padding: 13px 2px 8px;
-
   border: 0;
-
   background: none;
-
   color: #777;
-
   font-weight: 800;
-
   font-size: 10px;
-
-  transition:
-    color .2s ease,
-    transform .2s ease;
 }
 
 nav button.active {
@@ -416,129 +296,61 @@ nav button.active {
 
 .nav-icon {
   display: block;
-
   font-size: 22px;
-
   height: 28px;
 }
 
-
-/* PAGE ANIMATION */
+/* ANIMATION */
 
 @keyframes pageIn {
-
   from {
     opacity: 0;
-
-    transform:
-      translateY(5px);
+    transform: translateY(5px);
   }
 
   to {
     opacity: 1;
-
-    transform:
-      translateY(0);
+    transform: translateY(0);
   }
-
 }
-
 
 /* LIGHTBOX */
 
 .lightbox {
   position: fixed;
-
   inset: 0;
-
   background: rgba(0,0,0,.94);
-
   display: none;
-
   align-items: center;
-
   justify-content: center;
-
   padding: 20px;
-
   z-index: 9999;
-
-  opacity: 0;
-
-  transition:
-    opacity .2s ease;
 }
 
 .lightbox.active {
   display: flex;
-
-  opacity: 1;
 }
 
 .lightbox img {
   max-width: 95vw;
-
   max-height: 88vh;
-
   object-fit: contain;
-
   border-radius: 14px;
-
-  box-shadow:
-    0 15px 45px
-    rgba(0,0,0,.5);
-
-  animation:
-    zoomIn .2s ease-out;
 }
 
 .lightbox-close {
   position: absolute;
-
   top: 18px;
   right: 20px;
-
   width: 44px;
   height: 44px;
-
   border: 1px solid #444;
-
   border-radius: 50%;
-
   background: #111;
-
   color: #fff;
-
   font-size: 26px;
-
-  line-height: 1;
-
   cursor: pointer;
-
-  transition:
-    color .2s ease,
-    border-color .2s ease;
 }
-
-
-/* LIGHTBOX ANIMATION */
-
-@keyframes zoomIn {
-
-  from {
-    transform: scale(.97);
-
-    opacity: 0;
-  }
-
-  to {
-    transform: scale(1);
-
-    opacity: 1;
-  }
-
-}
-
 
 /* DESKTOP HOVER */
 
@@ -546,52 +358,30 @@ nav button.active {
 
   .card.clickable:hover {
     transform: translateY(-3px);
-
     border-color: #B88746;
-
-    box-shadow:
-      0 8px 22px
-      rgba(184,135,70,.08);
+    box-shadow: 0 8px 22px rgba(184,135,70,.08);
   }
 
   .card.clickable:hover .member-car {
     transform: scale(1.015);
   }
 
+  .instagram-tag:hover {
+    color: #f5f5f5;
+  }
+
   nav button:hover {
     color: #B88746;
   }
 
-  .back:hover {
-    color: #B88746;
-
-    transform:
-      translateX(-3px);
-  }
-
-  .lightbox-close:hover {
-    color: #B88746;
-
-    border-color: #B88746;
-  }
-
-  .instagram-tag:hover {
-    color: #f5f5f5;
-
-    transform:
-      translateX(2px);
-  }
-
 }
 
-
-/* MOBILE TOUCH */
+/* MOBILE */
 
 @media (hover:none) {
 
   .card.clickable:active {
     transform: scale(.985);
-
     border-color: #B88746;
   }
 
@@ -601,36 +391,12 @@ nav button.active {
 
 }
 
-
-/* REDUCED MOTION */
-
-@media (prefers-reduced-motion:reduce) {
-
-  html {
-    scroll-behavior: auto;
-  }
-
-  *,
-  *::before,
-  *::after {
-
-    animation-duration: .01ms !important;
-
-    animation-iteration-count: 1 !important;
-
-    transition-duration: .01ms !important;
-  }
-
-}
-
-
 /* SMALL PHONES */
 
 @media (max-width: 380px) {
 
   .header-inner {
-    grid-template-columns:
-      1fr 90px 1fr;
+    grid-template-columns: 1fr 90px 1fr;
   }
 
   .club-logo {
@@ -647,9 +413,7 @@ nav button.active {
 </style>
 </head>
 
-
 <body>
-
 
 <!-- HEADER -->
 
@@ -662,17 +426,13 @@ nav button.active {
       href="https://www.instagram.com/cars_for_fun_official/"
       target="_blank"
       rel="noopener noreferrer">
-
       @cars_for_fun_official
-
     </a>
-
 
     <img
       src="e84c0824-972f-4a99-8f85-993ec35e1e10.jpeg"
       alt="AK Cars for Fun"
       class="club-logo">
-
 
     <div class="header-space"></div>
 
@@ -680,29 +440,20 @@ nav button.active {
 
 </header>
 
-
-
 <main>
-
 
 <!-- HOME -->
 
-<section
-  id="home"
-  class="page active">
+<section id="home" class="page active">
 
   <div class="tag">
     ZAGREB / HRVATSKA — AKCF
   </div>
 
-
   <h1>
     VIŠE OD<br>
-    <span class="gold">
-      AUTOMOBILA.
-    </span>
+    <span class="gold">AUTOMOBILA.</span>
   </h1>
-
 
   <p class="intro">
     Dobrodošli u digitalnu garažu AK Cars for Fun.
@@ -710,18 +461,11 @@ nav button.active {
     na jednom mjestu.
   </p>
 
+  <div class="card clickable" onclick="showPage('members')">
 
-  <div
-    class="card clickable"
-    onclick="showPage('members')">
+    <span class="card-label">ČLANOVI</span>
 
-    <span class="card-label">
-      ČLANOVI
-    </span>
-
-    <h3>
-      Naša ekipa →
-    </h3>
+    <h3>Naša ekipa →</h3>
 
     <p>
       Upoznaj članove i automobile koje voze.
@@ -729,18 +473,11 @@ nav button.active {
 
   </div>
 
+  <div class="card clickable" onclick="showPage('garage')">
 
-  <div
-    class="card clickable"
-    onclick="showPage('garage')">
+    <span class="card-label">GARAŽA</span>
 
-    <span class="card-label">
-      GARAŽA
-    </span>
-
-    <h3>
-      Naši automobili →
-    </h3>
+    <h3>Naši automobili →</h3>
 
     <p>
       Pogledaj projekte AK Cars for Fun ekipe.
@@ -750,45 +487,30 @@ nav button.active {
 
 </section>
 
-
-
 <!-- MEMBERS -->
 
-<section
-  id="members"
-  class="page">
+<section id="members" class="page">
 
-  <div class="tag">
-    AK CARS FOR FUN
-  </div>
+  <div class="tag">AK CARS FOR FUN</div>
 
-  <h2>
-    Članovi
-  </h2>
+  <h2>Članovi</h2>
 
   <p class="intro">
     Ljudi iza automobila. Upoznaj našu ekipu i njihove projekte.
   </p>
 
-
   <!-- ZELJKO -->
 
-  <div
-    class="card clickable"
-    onclick="showPage('zeljko')">
+  <div class="card clickable" onclick="showPage('zeljko')">
 
     <img
       class="member-car"
       src="IMG_5436.jpeg"
       alt="Željko VW Golf 4">
 
-    <span class="card-label">
-      ČLAN
-    </span>
+    <span class="card-label">ČLAN</span>
 
-    <h3>
-      Željko
-    </h3>
+    <h3>Željko</h3>
 
     <p>
       VW Golf 4 • 1998.<br>
@@ -797,25 +519,18 @@ nav button.active {
 
   </div>
 
-
   <!-- KRISTIJAN -->
 
-  <div
-    class="card clickable"
-    onclick="showPage('kristijan')">
+  <div class="card clickable" onclick="showPage('kristijan')">
 
     <img
       class="member-car"
       src="IMG_5511.jpeg"
       alt="Kristijan SEAT Leon FR">
 
-    <span class="card-label">
-      ČLAN
-    </span>
+    <span class="card-label">ČLAN</span>
 
-    <h3>
-      Kristijan
-    </h3>
+    <h3>Kristijan</h3>
 
     <p>
       SEAT Leon FR • 2014.<br>
@@ -824,25 +539,18 @@ nav button.active {
 
   </div>
 
-
   <!-- IVAN -->
 
-  <div
-    class="card clickable"
-    onclick="showPage('ivan')">
+  <div class="card clickable" onclick="showPage('ivan')">
 
     <img
       class="member-car"
       src="E3DAC88B-872D-42EB-A552-9F9FBBA08405.jpeg"
       alt="Ivan Mercedes-Benz C-klasa Coupé">
 
-    <span class="card-label">
-      ČLAN
-    </span>
+    <span class="card-label">ČLAN</span>
 
-    <h3>
-      Ivan
-    </h3>
+    <h3>Ivan</h3>
 
     <p>
       Mercedes-Benz C-klasa Coupé • 2012.<br>
@@ -851,25 +559,18 @@ nav button.active {
 
   </div>
 
-
   <!-- LEON -->
 
-  <div
-    class="card clickable"
-    onclick="showPage('leon')">
+  <div class="card clickable" onclick="showPage('leon')">
 
     <img
       class="member-car"
       src="IMG_0088.jpeg"
       alt="Leon VW Passat B5.5">
 
-    <span class="card-label">
-      ČLAN
-    </span>
+    <span class="card-label">ČLAN</span>
 
-    <h3>
-      Leon
-    </h3>
+    <h3>Leon</h3>
 
     <p>
       VW Passat B5.5 • 2001.<br>
@@ -878,45 +579,48 @@ nav button.active {
 
   </div>
 
+  <!-- MARE -->
+
+  <div class="card clickable" onclick="showPage('mare')">
+
+    <img
+      class="member-car"
+      src="f43f177b-8c9a-4eb7-81d0-60cfafc8ebc0.jpeg"
+      alt="Mare VW Jetta">
+
+    <span class="card-label">ČLAN</span>
+
+    <h3>Mare</h3>
+
+    <p>
+      VW Jetta • 1997.<br>
+      1.8 • 90 KS / mapa 130 KS
+    </p>
+
+  </div>
+
 </section>
-
-
 
 <!-- ZELJKO PROFILE -->
 
-<section
-  id="zeljko"
-  class="page">
+<section id="zeljko" class="page">
 
-  <button
-    class="back"
-    onclick="showPage('members')">
-
+  <button class="back" onclick="showPage('members')">
     ← Natrag na članove
-
   </button>
-
 
   <img
     class="profile-car"
     src="IMG_5436.jpeg"
     alt="VW Golf 4">
 
+  <div class="tag">AK CARS FOR FUN MEMBER</div>
 
-  <div class="tag">
-    AK CARS FOR FUN MEMBER
-  </div>
-
-
-  <h2 class="profile-name">
-    Željko
-  </h2>
-
+  <h2 class="profile-name">Željko</h2>
 
   <div class="profile-car-name">
     VOLKSWAGEN GOLF 4
   </div>
-
 
   <div class="spec-grid">
 
@@ -942,47 +646,20 @@ nav button.active {
 
   </div>
 
-
   <div class="card">
 
-    <span class="card-label">
-      MODIFIKACIJE
-    </span>
-
+    <span class="card-label">MODIFIKACIJE</span>
 
     <div class="mods">
 
-      <span class="mod">
-        Stage 1
-      </span>
-
-      <span class="mod">
-        Downpipe
-      </span>
-
-      <span class="mod">
-        Gljiva
-      </span>
-
-      <span class="mod">
-        Gewinde
-      </span>
-
-      <span class="mod">
-        Smoke farovi
-      </span>
-
-      <span class="mod">
-        Prednji Jubi lip
-      </span>
-
-      <span class="mod">
-        Zadnji Jubi lip
-      </span>
-
-      <span class="mod">
-        Recaro sjedala
-      </span>
+      <span class="mod">Stage 1</span>
+      <span class="mod">Downpipe</span>
+      <span class="mod">Gljiva</span>
+      <span class="mod">Gewinde</span>
+      <span class="mod">Smoke farovi</span>
+      <span class="mod">Prednji Jubi lip</span>
+      <span class="mod">Zadnji Jubi lip</span>
+      <span class="mod">Recaro sjedala</span>
 
     </div>
 
@@ -990,43 +667,26 @@ nav button.active {
 
 </section>
 
-
-
 <!-- KRISTIJAN PROFILE -->
 
-<section
-  id="kristijan"
-  class="page">
+<section id="kristijan" class="page">
 
-  <button
-    class="back"
-    onclick="showPage('members')">
-
+  <button class="back" onclick="showPage('members')">
     ← Natrag na članove
-
   </button>
-
 
   <img
     class="profile-car"
     src="IMG_5511.jpeg"
     alt="SEAT Leon FR">
 
+  <div class="tag">AK CARS FOR FUN MEMBER</div>
 
-  <div class="tag">
-    AK CARS FOR FUN MEMBER
-  </div>
-
-
-  <h2 class="profile-name">
-    Kristijan
-  </h2>
-
+  <h2 class="profile-name">Kristijan</h2>
 
   <div class="profile-car-name">
     SEAT LEON FR
   </div>
-
 
   <div class="spec-grid">
 
@@ -1052,51 +712,21 @@ nav button.active {
 
   </div>
 
-
   <div class="card">
 
-    <span class="card-label">
-      MODIFIKACIJE
-    </span>
-
+    <span class="card-label">MODIFIKACIJE</span>
 
     <div class="mods">
 
-      <span class="mod">
-        AP gewinde
-      </span>
-
-      <span class="mod">
-        Maxton prednji lip
-      </span>
-
-      <span class="mod">
-        Maxton zadnji lip
-      </span>
-
-      <span class="mod">
-        Rieger spojler + lip
-      </span>
-
-      <span class="mod">
-        4. stop svjetlo
-      </span>
-
-      <span class="mod">
-        Litec štopovi
-      </span>
-
-      <span class="mod">
-        RGB DRL moduli
-      </span>
-
-      <span class="mod">
-        Custom obloga volana
-      </span>
-
-      <span class="mod">
-        Golf R shifter
-      </span>
+      <span class="mod">AP gewinde</span>
+      <span class="mod">Maxton prednji lip</span>
+      <span class="mod">Maxton zadnji lip</span>
+      <span class="mod">Rieger spojler + lip</span>
+      <span class="mod">4. stop svjetlo</span>
+      <span class="mod">Litec štopovi</span>
+      <span class="mod">RGB DRL moduli</span>
+      <span class="mod">Custom obloga volana</span>
+      <span class="mod">Golf R shifter</span>
 
     </div>
 
@@ -1104,43 +734,26 @@ nav button.active {
 
 </section>
 
-
-
 <!-- IVAN PROFILE -->
 
-<section
-  id="ivan"
-  class="page">
+<section id="ivan" class="page">
 
-  <button
-    class="back"
-    onclick="showPage('members')">
-
+  <button class="back" onclick="showPage('members')">
     ← Natrag na članove
-
   </button>
-
 
   <img
     class="profile-car"
     src="E3DAC88B-872D-42EB-A552-9F9FBBA08405.jpeg"
     alt="Mercedes-Benz C-klasa Coupé">
 
+  <div class="tag">AK CARS FOR FUN MEMBER</div>
 
-  <div class="tag">
-    AK CARS FOR FUN MEMBER
-  </div>
-
-
-  <h2 class="profile-name">
-    Ivan
-  </h2>
-
+  <h2 class="profile-name">Ivan</h2>
 
   <div class="profile-car-name">
     MERCEDES-BENZ C-KLASA COUPÉ
   </div>
-
 
   <div class="spec-grid">
 
@@ -1163,43 +776,26 @@ nav button.active {
 
 </section>
 
-
-
 <!-- LEON PROFILE -->
 
-<section
-  id="leon"
-  class="page">
+<section id="leon" class="page">
 
-  <button
-    class="back"
-    onclick="showPage('members')">
-
+  <button class="back" onclick="showPage('members')">
     ← Natrag na članove
-
   </button>
-
 
   <img
     class="profile-car"
     src="IMG_0088.jpeg"
     alt="VW Passat B5.5">
 
+  <div class="tag">AK CARS FOR FUN MEMBER</div>
 
-  <div class="tag">
-    AK CARS FOR FUN MEMBER
-  </div>
-
-
-  <h2 class="profile-name">
-    Leon
-  </h2>
-
+  <h2 class="profile-name">Leon</h2>
 
   <div class="profile-car-name">
     VOLKSWAGEN PASSAT B5.5
   </div>
-
 
   <div class="spec-grid">
 
@@ -1227,43 +823,115 @@ nav button.active {
 
 </section>
 
+<!-- MARE PROFILE -->
 
+<section id="mare" class="page">
+
+  <button class="back" onclick="showPage('members')">
+    ← Natrag na članove
+  </button>
+
+  <img
+    class="profile-car"
+    src="f43f177b-8c9a-4eb7-81d0-60cfafc8ebc0.jpeg"
+    alt="Mare VW Jetta">
+
+  <div class="tag">AK CARS FOR FUN MEMBER</div>
+
+  <h2 class="profile-name">Mare</h2>
+
+  <div class="profile-car-name">
+    VOLKSWAGEN JETTA
+  </div>
+
+  <div class="spec-grid">
+
+    <div class="spec">
+      <small>GODIŠTE</small>
+      <strong>1997.</strong>
+    </div>
+
+    <div class="spec">
+      <small>MOTOR</small>
+      <strong>1.8</strong>
+    </div>
+
+    <div class="spec">
+      <small>TVORNIČKA SNAGA</small>
+      <strong>90 KS</strong>
+    </div>
+
+    <div class="spec">
+      <small>MAPA</small>
+      <strong>130 KS</strong>
+    </div>
+
+    <div class="spec">
+      <small>FELGE</small>
+      <strong>Technomagnetic</strong>
+    </div>
+
+  </div>
+
+  <div class="card">
+
+    <span class="card-label">MODIFIKACIJE</span>
+
+    <div class="mods">
+
+      <span class="mod">Rieger bočni pragovi</span>
+      <span class="mod">Rieger stražnji spojler</span>
+      <span class="mod">Rieger prednja ralica</span>
+      <span class="mod">Double twin farovi s lećama</span>
+      <span class="mod">OPC kožna sjedala</span>
+      <span class="mod">OMP nosači sjedala</span>
+      <span class="mod">Ručno rađeni drveni crveni Sparco volan</span>
+      <span class="mod">Start/Stop gumb</span>
+      <span class="mod">PlayStation 2 Slim u pretincu</span>
+      <span class="mod">Kompletno Alpine ozvučenje</span>
+      <span class="mod">Magnat pojačalo</span>
+      <span class="mod">Subwoofer</span>
+      <span class="mod">K&N sportski filter / gljiva</span>
+      <span class="mod">Sebring sportski ispuh</span>
+      <span class="mod">Dupli Sebring karbonski završeci</span>
+      <span class="mod">RGB podno osvjetljenje preko mobitela</span>
+      <span class="mod">Osvjetljenje interijera</span>
+      <span class="mod">Nitro boca u gepeku</span>
+      <span class="mod">F&F grafike</span>
+      <span class="mod">Mapa 130 KS</span>
+      <span class="mod">Prednji strut bar</span>
+      <span class="mod">Ta Technix gewinde</span>
+
+    </div>
+
+  </div>
+
+</section>
 
 <!-- GARAGE -->
 
-<section
-  id="garage"
-  class="page">
+<section id="garage" class="page">
 
-  <div class="tag">
-    DIGITALNA GARAŽA
-  </div>
+  <div class="tag">DIGITALNA GARAŽA</div>
 
-  <h2>
-    Garaža
-  </h2>
+  <h2>Garaža</h2>
 
   <p class="intro">
     Automobili članova AK Cars for Fun.
   </p>
 
+  <!-- ZELJKO -->
 
-  <div
-    class="card clickable"
-    onclick="showPage('zeljko')">
+  <div class="card clickable" onclick="showPage('zeljko')">
 
     <img
       class="member-car"
       src="IMG_5436.jpeg"
       alt="VW Golf 4">
 
-    <span class="card-label">
-      VOLKSWAGEN
-    </span>
+    <span class="card-label">VOLKSWAGEN</span>
 
-    <h3>
-      Golf 4
-    </h3>
+    <h3>Golf 4</h3>
 
     <p>
       1998. • 1.9 TDI • 150 KS<br>
@@ -1272,23 +940,18 @@ nav button.active {
 
   </div>
 
+  <!-- KRISTIJAN -->
 
-  <div
-    class="card clickable"
-    onclick="showPage('kristijan')">
+  <div class="card clickable" onclick="showPage('kristijan')">
 
     <img
       class="member-car"
       src="IMG_5511.jpeg"
       alt="SEAT Leon FR">
 
-    <span class="card-label">
-      SEAT
-    </span>
+    <span class="card-label">SEAT</span>
 
-    <h3>
-      Leon FR
-    </h3>
+    <h3>Leon FR</h3>
 
     <p>
       2014. • 2.0 TDI • 184 KS<br>
@@ -1297,23 +960,18 @@ nav button.active {
 
   </div>
 
+  <!-- IVAN -->
 
-  <div
-    class="card clickable"
-    onclick="showPage('ivan')">
+  <div class="card clickable" onclick="showPage('ivan')">
 
     <img
       class="member-car"
       src="E3DAC88B-872D-42EB-A552-9F9FBBA08405.jpeg"
       alt="Mercedes-Benz C-klasa Coupé">
 
-    <span class="card-label">
-      MERCEDES-BENZ
-    </span>
+    <span class="card-label">MERCEDES-BENZ</span>
 
-    <h3>
-      C-klasa Coupé
-    </h3>
+    <h3>C-klasa Coupé</h3>
 
     <p>
       2012. • 220 CDI • 220 KS<br>
@@ -1322,23 +980,18 @@ nav button.active {
 
   </div>
 
+  <!-- LEON -->
 
-  <div
-    class="card clickable"
-    onclick="showPage('leon')">
+  <div class="card clickable" onclick="showPage('leon')">
 
     <img
       class="member-car"
       src="IMG_0088.jpeg"
       alt="VW Passat B5.5">
 
-    <span class="card-label">
-      VOLKSWAGEN
-    </span>
+    <span class="card-label">VOLKSWAGEN</span>
 
-    <h3>
-      Passat B5.5
-    </h3>
+    <h3>Passat B5.5</h3>
 
     <p>
       2001. • 1.9 TDI • 130 KS<br>
@@ -1347,28 +1000,39 @@ nav button.active {
 
   </div>
 
+  <!-- MARE -->
+
+  <div class="card clickable" onclick="showPage('mare')">
+
+    <img
+      class="member-car"
+      src="f43f177b-8c9a-4eb7-81d0-60cfafc8ebc0.jpeg"
+      alt="VW Jetta">
+
+    <span class="card-label">VOLKSWAGEN</span>
+
+    <h3>Jetta</h3>
+
+    <p>
+      1997. • 1.8 • 90 KS / mapa 130 KS<br>
+      Vlasnik: Mare
+    </p>
+
+  </div>
+
 </section>
-
-
 
 <!-- MEETS -->
 
-<section
-  id="meets"
-  class="page">
+<section id="meets" class="page">
 
-  <div class="tag">
-    AKCF EVENTS
-  </div>
+  <div class="tag">AKCF EVENTS</div>
 
-  <h2>
-    Meetovi
-  </h2>
+  <h2>Meetovi</h2>
 
   <p class="intro">
     Okupljanja, vožnje i događanja AK Cars for Fun ekipe.
   </p>
-
 
   <div class="empty">
 
@@ -1382,32 +1046,21 @@ nav button.active {
 
 </section>
 
-
-
 <!-- GALLERY -->
 
-<section
-  id="gallery"
-  class="page">
+<section id="gallery" class="page">
 
-  <div class="tag">
-    AKCF MEDIA
-  </div>
+  <div class="tag">AKCF MEDIA</div>
 
-  <h2>
-    Galerija
-  </h2>
+  <h2>Galerija</h2>
 
   <p class="intro">
     Fotografije automobila, meetova i naše ekipe.
   </p>
 
-
   <!-- ZELJKO -->
 
-  <div
-    class="card clickable"
-    onclick="showPage('zeljko')">
+  <div class="card clickable" onclick="showPage('zeljko')">
 
     <img
       class="member-car gallery-image"
@@ -1415,22 +1068,15 @@ nav button.active {
       alt="VW Golf 4"
       onclick="event.stopPropagation(); openLightbox(this)">
 
-    <span class="card-label">
-      ŽELJKO
-    </span>
+    <span class="card-label">ŽELJKO</span>
 
-    <h3>
-      VW Golf 4
-    </h3>
+    <h3>VW Golf 4</h3>
 
   </div>
 
-
   <!-- KRISTIJAN -->
 
-  <div
-    class="card clickable"
-    onclick="showPage('kristijan')">
+  <div class="card clickable" onclick="showPage('kristijan')">
 
     <img
       class="member-car gallery-image"
@@ -1438,22 +1084,15 @@ nav button.active {
       alt="SEAT Leon FR"
       onclick="event.stopPropagation(); openLightbox(this)">
 
-    <span class="card-label">
-      KRISTIJAN
-    </span>
+    <span class="card-label">KRISTIJAN</span>
 
-    <h3>
-      SEAT Leon FR
-    </h3>
+    <h3>SEAT Leon FR</h3>
 
   </div>
 
-
   <!-- IVAN -->
 
-  <div
-    class="card clickable"
-    onclick="showPage('ivan')">
+  <div class="card clickable" onclick="showPage('ivan')">
 
     <img
       class="member-car gallery-image"
@@ -1461,22 +1100,15 @@ nav button.active {
       alt="Mercedes-Benz C-klasa Coupé"
       onclick="event.stopPropagation(); openLightbox(this)">
 
-    <span class="card-label">
-      IVAN
-    </span>
+    <span class="card-label">IVAN</span>
 
-    <h3>
-      Mercedes-Benz C-klasa Coupé
-    </h3>
+    <h3>Mercedes-Benz C-klasa Coupé</h3>
 
   </div>
 
-
   <!-- LEON -->
 
-  <div
-    class="card clickable"
-    onclick="showPage('leon')">
+  <div class="card clickable" onclick="showPage('leon')">
 
     <img
       class="member-car gallery-image"
@@ -1484,13 +1116,25 @@ nav button.active {
       alt="VW Passat B5.5"
       onclick="event.stopPropagation(); openLightbox(this)">
 
-    <span class="card-label">
-      LEON
-    </span>
+    <span class="card-label">LEON</span>
 
-    <h3>
-      VW Passat B5.5
-    </h3>
+    <h3>VW Passat B5.5</h3>
+
+  </div>
+
+  <!-- MARE -->
+
+  <div class="card clickable" onclick="showPage('mare')">
+
+    <img
+      class="member-car gallery-image"
+      src="f43f177b-8c9a-4eb7-81d0-60cfafc8ebc0.jpeg"
+      alt="Mare VW Jetta"
+      onclick="event.stopPropagation(); openLightbox(this)">
+
+    <span class="card-label">MARE</span>
+
+    <h3>VW Jetta</h3>
 
   </div>
 
@@ -1498,77 +1142,36 @@ nav button.active {
 
 </main>
 
-
-
 <!-- BOTTOM NAV -->
 
 <nav>
 
-
-  <button
-    class="active"
-    onclick="showPage('home',this)">
-
-    <span class="nav-icon">
-      ⌂
-    </span>
-
+  <button class="active" onclick="showPage('home',this)">
+    <span class="nav-icon">⌂</span>
     POČETNA
-
   </button>
 
-
-  <button
-    onclick="showPage('members',this)">
-
-    <span class="nav-icon">
-      ♙
-    </span>
-
+  <button onclick="showPage('members',this)">
+    <span class="nav-icon">♙</span>
     ČLANOVI
-
   </button>
 
-
-  <button
-    onclick="showPage('garage',this)">
-
-    <span class="nav-icon">
-      🚗
-    </span>
-
+  <button onclick="showPage('garage',this)">
+    <span class="nav-icon">🚗</span>
     GARAŽA
-
   </button>
 
-
-  <button
-    onclick="showPage('meets',this)">
-
-    <span class="nav-icon">
-      ◆
-    </span>
-
+  <button onclick="showPage('meets',this)">
+    <span class="nav-icon">◆</span>
     MEETOVI
-
   </button>
 
-
-  <button
-    onclick="showPage('gallery',this)">
-
-    <span class="nav-icon">
-      ▦
-    </span>
-
+  <button onclick="showPage('gallery',this)">
+    <span class="nav-icon">▦</span>
     GALERIJA
-
   </button>
-
 
 </nav>
-
-
 
 <!-- LIGHTBOX -->
 
@@ -1577,69 +1180,42 @@ nav button.active {
   class="lightbox"
   onclick="closeLightbox(event)">
 
-
   <button
     class="lightbox-close"
     onclick="closeLightbox()"
     aria-label="Zatvori">
-
     ×
-
   </button>
-
 
   <img
     id="lightbox-image"
     src=""
     alt="Galerija">
 
-
 </div>
 
-
-
 <script>
-
 
 /* PAGE NAVIGATION */
 
 function showPage(pageId, button) {
 
-  document
-    .querySelectorAll('.page')
-    .forEach(function(page) {
+  document.querySelectorAll('.page').forEach(function(page) {
+    page.classList.remove('active');
+  });
 
-      page.classList.remove('active');
+  document.getElementById(pageId).classList.add('active');
 
-    });
-
-
-  document
-    .getElementById(pageId)
-    .classList.add('active');
-
-
-  document
-    .querySelectorAll('nav button')
-    .forEach(function(btn) {
-
-      btn.classList.remove('active');
-
-    });
-
+  document.querySelectorAll('nav button').forEach(function(btn) {
+    btn.classList.remove('active');
+  });
 
   if (button) {
-
     button.classList.add('active');
-
   }
 
-
   window.scrollTo(0, 0);
-
 }
-
-
 
 /* OPEN IMAGE */
 
@@ -1648,28 +1224,16 @@ function openLightbox(image) {
   const lightbox =
     document.getElementById('lightbox');
 
-
   const lightboxImage =
     document.getElementById('lightbox-image');
 
-
-  lightboxImage.src =
-    image.src;
-
-
-  lightboxImage.alt =
-    image.alt;
-
+  lightboxImage.src = image.src;
+  lightboxImage.alt = image.alt;
 
   lightbox.classList.add('active');
 
-
-  document.body.style.overflow =
-    'hidden';
-
+  document.body.style.overflow = 'hidden';
 }
-
-
 
 /* CLOSE IMAGE */
 
@@ -1680,41 +1244,27 @@ function closeLightbox(event) {
     event.target.id !== 'lightbox' &&
     !event.target.classList.contains('lightbox-close')
   ) {
-
     return;
-
   }
-
 
   document
     .getElementById('lightbox')
     .classList.remove('active');
 
-
-  document.body.style.overflow =
-    '';
-
+  document.body.style.overflow = '';
 }
-
-
 
 /* ESC KEY */
 
-document.addEventListener(
-  'keydown',
-  function(event) {
+document.addEventListener('keydown', function(event) {
 
-    if (event.key === 'Escape') {
-
-      closeLightbox();
-
-    }
-
+  if (event.key === 'Escape') {
+    closeLightbox();
   }
-);
+
+});
 
 </script>
-
 
 </body>
 </html>
