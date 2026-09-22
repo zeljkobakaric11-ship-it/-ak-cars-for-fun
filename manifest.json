@@ -1,0 +1,18 @@
+{
+  "name": "AK Cars for Fun",
+  "short_name": "AK Cars",
+  "description": "Službena aplikacija AK Cars for Fun",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#080808",
+  "theme_color": "#080808",
+  "icons": [
+    {
+      "src": "e84c0824-972f-4a99-8f85-993ec35e1e10.jpeg",
+      "sizes": "any",
+      "type": "image/jpeg",
+      "purpose": "any"
+    }
+  ]
+}
