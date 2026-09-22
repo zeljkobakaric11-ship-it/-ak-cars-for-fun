@@ -67,8 +67,6 @@ header {
   width: 100%;
 }
 
-/* COLORS */
-
 .gold {
   color: #B88746;
 }
@@ -80,8 +78,6 @@ main {
   margin: auto;
   padding: 38px 20px 125px;
 }
-
-/* PAGES */
 
 .page {
   display: none;
@@ -130,10 +126,7 @@ h2 {
   border-radius: 18px;
   padding: 22px;
   margin-bottom: 16px;
-  transition:
-    transform .2s ease,
-    border-color .2s ease,
-    box-shadow .2s ease;
+  transition: transform .2s ease, border-color .2s ease, box-shadow .2s ease;
 }
 
 .clickable {
@@ -157,7 +150,7 @@ h2 {
   line-height: 1.5;
 }
 
-/* CAR IMAGES */
+/* IMAGES */
 
 .member-car {
   width: 100%;
@@ -174,7 +167,6 @@ h2 {
   object-fit: cover;
   border-radius: 18px;
   margin-bottom: 22px;
-  transition: transform .25s ease;
 }
 
 .gallery-image {
@@ -263,7 +255,7 @@ h2 {
   color: #777;
 }
 
-/* NAVIGATION */
+/* NAV */
 
 nav {
   position: fixed;
@@ -352,8 +344,6 @@ nav button.active {
   cursor: pointer;
 }
 
-/* DESKTOP HOVER */
-
 @media (hover:hover) and (pointer:fine) {
 
   .card.clickable:hover {
@@ -373,10 +363,7 @@ nav button.active {
   nav button:hover {
     color: #B88746;
   }
-
 }
-
-/* MOBILE */
 
 @media (hover:none) {
 
@@ -388,10 +375,7 @@ nav button.active {
   nav button:active {
     transform: scale(.94);
   }
-
 }
-
-/* SMALL PHONES */
 
 @media (max-width: 380px) {
 
@@ -407,7 +391,6 @@ nav button.active {
   .instagram-tag {
     font-size: 9px;
   }
-
 }
 
 </style>
@@ -467,9 +450,7 @@ nav button.active {
 
     <h3>Naša ekipa →</h3>
 
-    <p>
-      Upoznaj članove i automobile koje voze.
-    </p>
+    <p>Upoznaj članove i automobile koje voze.</p>
 
   </div>
 
@@ -479,9 +460,7 @@ nav button.active {
 
     <h3>Naši automobili →</h3>
 
-    <p>
-      Pogledaj projekte AK Cars for Fun ekipe.
-    </p>
+    <p>Pogledaj projekte AK Cars for Fun ekipe.</p>
 
   </div>
 
@@ -503,10 +482,7 @@ nav button.active {
 
   <div class="card clickable" onclick="showPage('zeljko')">
 
-    <img
-      class="member-car"
-      src="IMG_5436.jpeg"
-      alt="Željko VW Golf 4">
+    <img class="member-car" src="IMG_5436.jpeg" alt="Željko VW Golf 4">
 
     <span class="card-label">ČLAN</span>
 
@@ -523,10 +499,7 @@ nav button.active {
 
   <div class="card clickable" onclick="showPage('kristijan')">
 
-    <img
-      class="member-car"
-      src="IMG_5511.jpeg"
-      alt="Kristijan SEAT Leon FR">
+    <img class="member-car" src="IMG_5511.jpeg" alt="Kristijan SEAT Leon FR">
 
     <span class="card-label">ČLAN</span>
 
@@ -563,10 +536,7 @@ nav button.active {
 
   <div class="card clickable" onclick="showPage('leon')">
 
-    <img
-      class="member-car"
-      src="IMG_0088.jpeg"
-      alt="Leon VW Passat B5.5">
+    <img class="member-car" src="IMG_0088.jpeg" alt="Leon VW Passat B5.5">
 
     <span class="card-label">ČLAN</span>
 
@@ -599,6 +569,26 @@ nav button.active {
 
   </div>
 
+  <!-- MATEA -->
+
+  <div class="card clickable" onclick="showPage('matea')">
+
+    <img
+      class="member-car"
+      src="IMG_0818.jpeg"
+      alt="Matea SEAT Cordoba">
+
+    <span class="card-label">ČLAN</span>
+
+    <h3>Matea</h3>
+
+    <p>
+      SEAT Cordoba • 2005.<br>
+      1.9 TDI • 105 KS
+    </p>
+
+  </div>
+
 </section>
 
 <!-- ZELJKO PROFILE -->
@@ -609,10 +599,7 @@ nav button.active {
     ← Natrag na članove
   </button>
 
-  <img
-    class="profile-car"
-    src="IMG_5436.jpeg"
-    alt="VW Golf 4">
+  <img class="profile-car" src="IMG_5436.jpeg" alt="VW Golf 4">
 
   <div class="tag">AK CARS FOR FUN MEMBER</div>
 
@@ -675,10 +662,7 @@ nav button.active {
     ← Natrag na članove
   </button>
 
-  <img
-    class="profile-car"
-    src="IMG_5511.jpeg"
-    alt="SEAT Leon FR">
+  <img class="profile-car" src="IMG_5511.jpeg" alt="SEAT Leon FR">
 
   <div class="tag">AK CARS FOR FUN MEMBER</div>
 
@@ -784,10 +768,7 @@ nav button.active {
     ← Natrag na članove
   </button>
 
-  <img
-    class="profile-car"
-    src="IMG_0088.jpeg"
-    alt="VW Passat B5.5">
+  <img class="profile-car" src="IMG_0088.jpeg" alt="VW Passat B5.5">
 
   <div class="tag">AK CARS FOR FUN MEMBER</div>
 
@@ -908,6 +889,48 @@ nav button.active {
 
 </section>
 
+<!-- MATEA PROFILE -->
+
+<section id="matea" class="page">
+
+  <button class="back" onclick="showPage('members')">
+    ← Natrag na članove
+  </button>
+
+  <img
+    class="profile-car"
+    src="IMG_0818.jpeg"
+    alt="Matea SEAT Cordoba">
+
+  <div class="tag">AK CARS FOR FUN MEMBER</div>
+
+  <h2 class="profile-name">Matea</h2>
+
+  <div class="profile-car-name">
+    SEAT CORDOBA
+  </div>
+
+  <div class="spec-grid">
+
+    <div class="spec">
+      <small>GODIŠTE</small>
+      <strong>2005.</strong>
+    </div>
+
+    <div class="spec">
+      <small>MOTOR</small>
+      <strong>1.9 TDI</strong>
+    </div>
+
+    <div class="spec">
+      <small>SNAGA</small>
+      <strong>105 KS</strong>
+    </div>
+
+  </div>
+
+</section>
+
 <!-- GARAGE -->
 
 <section id="garage" class="page">
@@ -920,14 +943,9 @@ nav button.active {
     Automobili članova AK Cars for Fun.
   </p>
 
-  <!-- ZELJKO -->
-
   <div class="card clickable" onclick="showPage('zeljko')">
 
-    <img
-      class="member-car"
-      src="IMG_5436.jpeg"
-      alt="VW Golf 4">
+    <img class="member-car" src="IMG_5436.jpeg" alt="VW Golf 4">
 
     <span class="card-label">VOLKSWAGEN</span>
 
@@ -940,14 +958,9 @@ nav button.active {
 
   </div>
 
-  <!-- KRISTIJAN -->
-
   <div class="card clickable" onclick="showPage('kristijan')">
 
-    <img
-      class="member-car"
-      src="IMG_5511.jpeg"
-      alt="SEAT Leon FR">
+    <img class="member-car" src="IMG_5511.jpeg" alt="SEAT Leon FR">
 
     <span class="card-label">SEAT</span>
 
@@ -959,8 +972,6 @@ nav button.active {
     </p>
 
   </div>
-
-  <!-- IVAN -->
 
   <div class="card clickable" onclick="showPage('ivan')">
 
@@ -980,14 +991,9 @@ nav button.active {
 
   </div>
 
-  <!-- LEON -->
-
   <div class="card clickable" onclick="showPage('leon')">
 
-    <img
-      class="member-car"
-      src="IMG_0088.jpeg"
-      alt="VW Passat B5.5">
+    <img class="member-car" src="IMG_0088.jpeg" alt="VW Passat B5.5">
 
     <span class="card-label">VOLKSWAGEN</span>
 
@@ -999,8 +1005,6 @@ nav button.active {
     </p>
 
   </div>
-
-  <!-- MARE -->
 
   <div class="card clickable" onclick="showPage('mare')">
 
@@ -1016,6 +1020,26 @@ nav button.active {
     <p>
       1997. • 1.8 • 90 KS / mapa 130 KS<br>
       Vlasnik: Mare
+    </p>
+
+  </div>
+
+  <!-- MATEA GARAGE -->
+
+  <div class="card clickable" onclick="showPage('matea')">
+
+    <img
+      class="member-car"
+      src="IMG_0818.jpeg"
+      alt="SEAT Cordoba">
+
+    <span class="card-label">SEAT</span>
+
+    <h3>Cordoba</h3>
+
+    <p>
+      2005. • 1.9 TDI • 105 KS<br>
+      Vlasnik: Matea
     </p>
 
   </div>
@@ -1058,8 +1082,6 @@ nav button.active {
     Fotografije automobila, meetova i naše ekipe.
   </p>
 
-  <!-- ZELJKO -->
-
   <div class="card clickable" onclick="showPage('zeljko')">
 
     <img
@@ -1073,8 +1095,6 @@ nav button.active {
     <h3>VW Golf 4</h3>
 
   </div>
-
-  <!-- KRISTIJAN -->
 
   <div class="card clickable" onclick="showPage('kristijan')">
 
@@ -1090,8 +1110,6 @@ nav button.active {
 
   </div>
 
-  <!-- IVAN -->
-
   <div class="card clickable" onclick="showPage('ivan')">
 
     <img
@@ -1105,8 +1123,6 @@ nav button.active {
     <h3>Mercedes-Benz C-klasa Coupé</h3>
 
   </div>
-
-  <!-- LEON -->
 
   <div class="card clickable" onclick="showPage('leon')">
 
@@ -1122,19 +1138,33 @@ nav button.active {
 
   </div>
 
-  <!-- MARE -->
-
   <div class="card clickable" onclick="showPage('mare')">
 
     <img
       class="member-car gallery-image"
       src="f43f177b-8c9a-4eb7-81d0-60cfafc8ebc0.jpeg"
-      alt="Mare VW Jetta"
+      alt="VW Jetta"
       onclick="event.stopPropagation(); openLightbox(this)">
 
     <span class="card-label">MARE</span>
 
     <h3>VW Jetta</h3>
+
+  </div>
+
+  <!-- MATEA GALLERY -->
+
+  <div class="card clickable" onclick="showPage('matea')">
+
+    <img
+      class="member-car gallery-image"
+      src="IMG_0818.jpeg"
+      alt="SEAT Cordoba"
+      onclick="event.stopPropagation(); openLightbox(this)">
+
+    <span class="card-label">MATEA</span>
+
+    <h3>SEAT Cordoba</h3>
 
   </div>
 
@@ -1196,8 +1226,6 @@ nav button.active {
 
 <script>
 
-/* PAGE NAVIGATION */
-
 function showPage(pageId, button) {
 
   document.querySelectorAll('.page').forEach(function(page) {
@@ -1217,15 +1245,10 @@ function showPage(pageId, button) {
   window.scrollTo(0, 0);
 }
 
-/* OPEN IMAGE */
-
 function openLightbox(image) {
 
-  const lightbox =
-    document.getElementById('lightbox');
-
-  const lightboxImage =
-    document.getElementById('lightbox-image');
+  const lightbox = document.getElementById('lightbox');
+  const lightboxImage = document.getElementById('lightbox-image');
 
   lightboxImage.src = image.src;
   lightboxImage.alt = image.alt;
@@ -1234,8 +1257,6 @@ function openLightbox(image) {
 
   document.body.style.overflow = 'hidden';
 }
-
-/* CLOSE IMAGE */
 
 function closeLightbox(event) {
 
@@ -1247,14 +1268,10 @@ function closeLightbox(event) {
     return;
   }
 
-  document
-    .getElementById('lightbox')
-    .classList.remove('active');
+  document.getElementById('lightbox').classList.remove('active');
 
   document.body.style.overflow = '';
 }
-
-/* ESC KEY */
 
 document.addEventListener('keydown', function(event) {
 
