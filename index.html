@@ -2,7 +2,9 @@
 <html lang="hr">
 <head>
 <meta charset="UTF-8">
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+
 <meta name="theme-color" content="#080808">
 
 <link rel="manifest" href="manifest.json">
@@ -10,6 +12,7 @@
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black">
 <meta name="apple-mobile-web-app-title" content="AK Cars">
+
 <meta name="mobile-web-app-capable" content="yes">
 
 <link rel="apple-touch-icon" href="e84c0824-972f-4a99-8f85-993ec35e1e10.jpeg">
@@ -18,291 +21,360 @@
 
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
+
 html{scroll-behavior:smooth}
+
 body{
-  background:#080808;
-  color:#f5f5f5;
-  font-family:Arial,Helvetica,sans-serif;
-  min-height:100vh;
+background:#080808;
+color:#f5f5f5;
+font-family:Arial,Helvetica,sans-serif;
+min-height:100vh;
 }
+
 header{
-  padding:14px 12px;
-  border-bottom:1px solid #242424;
-  background:#080808;
+padding:14px 12px;
+border-bottom:1px solid #242424;
+background:#080808;
 }
+
 .header-inner{
-  max-width:700px;
-  margin:auto;
-  min-height:105px;
-  display:grid;
-  grid-template-columns:1fr 105px 1fr;
-  align-items:center;
+max-width:700px;
+margin:auto;
+min-height:105px;
+display:grid;
+grid-template-columns:1fr 105px 1fr;
+align-items:center;
 }
+
 .club-logo{
-  width:105px;
-  height:105px;
-  object-fit:cover;
-  border-radius:50%;
-  display:block;
-  margin:auto;
+width:105px;
+height:105px;
+object-fit:cover;
+border-radius:50%;
+display:block;
+margin:auto;
 }
+
 .instagram-tag{
-  justify-self:start;
-  color:#B88746;
-  text-decoration:none;
-  font-size:11px;
-  font-weight:800;
-  white-space:nowrap;
+justify-self:start;
+color:#B88746;
+text-decoration:none;
+font-size:11px;
+font-weight:800;
+white-space:nowrap;
 }
+
 main{
-  max-width:700px;
-  margin:auto;
-  padding:38px 20px 125px;
+max-width:700px;
+margin:auto;
+padding:38px 20px 125px;
 }
+
 .page{display:none}
+
 .page.active{
-  display:block;
-  animation:pageIn .2s ease;
+display:block;
+animation:pageIn .2s ease;
 }
+
 @keyframes pageIn{
-  from{opacity:0;transform:translateY(5px)}
-  to{opacity:1;transform:translateY(0)}
+from{opacity:0;transform:translateY(5px)}
+to{opacity:1;transform:translateY(0)}
 }
+
 .tag{
-  color:#B88746;
-  font-size:12px;
-  font-weight:900;
-  letter-spacing:3px;
-  margin-bottom:18px;
+color:#B88746;
+font-size:12px;
+font-weight:900;
+letter-spacing:3px;
+margin-bottom:18px;
 }
+
 h1{
-  font-size:clamp(45px,13vw,75px);
-  line-height:.92;
-  text-transform:uppercase;
-  letter-spacing:-3px;
-  margin-bottom:25px;
+font-size:clamp(45px,13vw,75px);
+line-height:.92;
+text-transform:uppercase;
+letter-spacing:-3px;
+margin-bottom:25px;
 }
+
 h2{
-  font-size:36px;
-  margin-bottom:12px;
+font-size:36px;
+margin-bottom:12px;
 }
+
 .intro{
-  color:#999;
-  font-size:17px;
-  line-height:1.6;
-  margin-bottom:32px;
+color:#999;
+font-size:17px;
+line-height:1.6;
+margin-bottom:32px;
 }
+
 .gold{color:#B88746}
+
 .card{
-  background:#121212;
-  border:1px solid #292929;
-  border-radius:18px;
-  padding:22px;
-  margin-bottom:16px;
+background:#121212;
+border:1px solid #292929;
+border-radius:18px;
+padding:22px;
+margin-bottom:16px;
 }
+
 .clickable{cursor:pointer}
+
 .card-label{
-  color:#B88746;
-  font-size:12px;
-  font-weight:900;
-  letter-spacing:2px;
+color:#B88746;
+font-size:12px;
+font-weight:900;
+letter-spacing:2px;
 }
+
 .card h3{
-  font-size:23px;
-  margin:9px 0;
+font-size:23px;
+margin:9px 0;
 }
+
 .card p{
-  color:#999;
-  line-height:1.5;
+color:#999;
+line-height:1.5;
 }
+
 .member-car{
-  width:100%;
-  height:200px;
-  object-fit:cover;
-  border-radius:14px;
-  margin-bottom:18px;
+width:100%;
+height:200px;
+object-fit:cover;
+border-radius:14px;
+margin-bottom:18px;
 }
+
 .profile-car{
-  width:100%;
-  height:290px;
-  object-fit:cover;
-  border-radius:18px;
-  margin-bottom:22px;
+width:100%;
+height:290px;
+object-fit:cover;
+border-radius:18px;
+margin-bottom:22px;
 }
+
 .profile-name{
-  font-size:40px;
-  margin-bottom:4px;
+font-size:40px;
+margin-bottom:4px;
 }
+
 .profile-car-name{
-  color:#B88746;
-  font-size:20px;
-  font-weight:800;
-  margin-bottom:28px;
+color:#B88746;
+font-size:20px;
+font-weight:800;
+margin-bottom:28px;
 }
+
 .spec-grid{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:10px;
-  margin-bottom:16px;
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:10px;
+margin-bottom:16px;
 }
+
 .spec{
-  background:#121212;
-  border:1px solid #292929;
-  border-radius:14px;
-  padding:16px;
+background:#121212;
+border:1px solid #292929;
+border-radius:14px;
+padding:16px;
 }
+
 .spec small{
-  display:block;
-  color:#777;
-  font-size:10px;
-  letter-spacing:2px;
-  margin-bottom:7px;
+display:block;
+color:#777;
+font-size:10px;
+letter-spacing:2px;
+margin-bottom:7px;
 }
-.spec strong{font-size:17px}
+
+.spec strong{
+font-size:17px;
+}
+
 .mods{
-  display:flex;
-  flex-wrap:wrap;
-  gap:8px;
-  margin-top:15px;
+display:flex;
+flex-wrap:wrap;
+gap:8px;
+margin-top:15px;
 }
+
 .mod{
-  background:#1d1d1d;
-  border:1px solid #3a3025;
-  border-radius:30px;
-  padding:9px 13px;
-  font-size:13px;
+background:#1d1d1d;
+border:1px solid #3a3025;
+border-radius:30px;
+padding:9px 13px;
+font-size:13px;
 }
+
 .back{
-  border:0;
-  background:none;
-  color:#B88746;
-  font-size:15px;
-  font-weight:bold;
-  margin-bottom:25px;
-  cursor:pointer;
+border:0;
+background:none;
+color:#B88746;
+font-size:15px;
+font-weight:bold;
+margin-bottom:25px;
+cursor:pointer;
 }
+
 .meet-cover{
-  width:100%;
-  height:230px;
-  object-fit:cover;
-  border-radius:14px;
-  margin-bottom:18px;
+width:100%;
+height:230px;
+object-fit:cover;
+border-radius:14px;
+margin-bottom:18px;
 }
+
 .meet-date{
-  color:#B88746;
-  font-weight:900;
-  font-size:13px;
-  letter-spacing:1px;
+color:#B88746;
+font-weight:900;
+font-size:13px;
+letter-spacing:1px;
 }
+
 .meet-stats{
-  display:flex;
-  gap:8px;
-  flex-wrap:wrap;
-  margin:14px 0;
+display:flex;
+gap:8px;
+flex-wrap:wrap;
+margin:14px 0;
 }
+
 .meet-stat{
-  background:#1c1c1c;
-  border:1px solid #333;
-  padding:8px 11px;
-  border-radius:20px;
-  font-size:12px;
+background:#1c1c1c;
+border:1px solid #333;
+padding:8px 11px;
+border-radius:20px;
+font-size:12px;
 }
+
 .award{
-  background:#17130d;
-  border:1px solid #5a4325;
-  border-radius:14px;
-  padding:14px;
-  margin-top:10px;
+background:#17130d;
+border:1px solid #5a4325;
+border-radius:14px;
+padding:14px;
+margin-top:10px;
 }
-.award strong{color:#B88746}
+
+.award strong{
+color:#B88746;
+}
+
 .meet-gallery{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:8px;
-  margin-top:18px;
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:8px;
+margin-top:18px;
 }
+
 .meet-gallery img{
-  width:100%;
-  height:150px;
-  object-fit:cover;
-  border-radius:12px;
-  cursor:zoom-in;
+width:100%;
+height:150px;
+object-fit:cover;
+border-radius:12px;
+cursor:zoom-in;
 }
+
 .section-title{
-  margin:30px 0 14px;
-  font-size:23px;
+margin:30px 0 14px;
+font-size:23px;
 }
+
 nav{
-  position:fixed;
-  left:0;
-  right:0;
-  bottom:0;
-  min-height:82px;
-  padding-bottom:env(safe-area-inset-bottom);
-  background:rgba(8,8,8,.97);
-  border-top:1px solid #292929;
-  display:flex;
-  justify-content:space-around;
-  z-index:999;
+position:fixed;
+left:0;
+right:0;
+bottom:0;
+min-height:82px;
+padding-bottom:env(safe-area-inset-bottom);
+background:rgba(8,8,8,.97);
+border-top:1px solid #292929;
+display:flex;
+justify-content:space-around;
+z-index:999;
 }
+
 nav button{
-  width:20%;
-  padding:13px 2px 8px;
-  border:0;
-  background:none;
-  color:#777;
-  font-weight:800;
-  font-size:10px;
+width:20%;
+padding:13px 2px 8px;
+border:0;
+background:none;
+color:#777;
+font-weight:800;
+font-size:10px;
 }
-nav button.active{color:#B88746}
+
+nav button.active{
+color:#B88746;
+}
+
 .nav-icon{
-  display:block;
-  font-size:22px;
-  height:28px;
+display:block;
+font-size:22px;
+height:28px;
 }
+
 .lightbox{
-  position:fixed;
-  inset:0;
-  background:rgba(0,0,0,.95);
-  display:none;
-  align-items:center;
-  justify-content:center;
-  padding:20px;
-  z-index:9999;
+position:fixed;
+inset:0;
+background:rgba(0,0,0,.95);
+display:none;
+align-items:center;
+justify-content:center;
+padding:20px;
+z-index:9999;
 }
-.lightbox.active{display:flex}
+
+.lightbox.active{
+display:flex;
+}
+
 .lightbox img{
-  max-width:95vw;
-  max-height:88vh;
-  object-fit:contain;
-  border-radius:14px;
+max-width:95vw;
+max-height:88vh;
+object-fit:contain;
+border-radius:14px;
 }
+
 .lightbox-close{
-  position:absolute;
-  top:18px;
-  right:20px;
-  width:44px;
-  height:44px;
-  border:1px solid #444;
-  border-radius:50%;
-  background:#111;
-  color:white;
-  font-size:26px;
+position:absolute;
+top:18px;
+right:20px;
+width:44px;
+height:44px;
+border:1px solid #444;
+border-radius:50%;
+background:#111;
+color:white;
+font-size:26px;
 }
+
 @media(max-width:380px){
-  .header-inner{grid-template-columns:1fr 90px 1fr}
-  .club-logo{width:90px;height:90px}
-  .instagram-tag{font-size:9px}
+.header-inner{
+grid-template-columns:1fr 90px 1fr;
+}
+
+.club-logo{
+width:90px;
+height:90px;
+}
+
+.instagram-tag{
+font-size:9px;
+}
 }
 </style>
+
 </head>
 
 <body>
 
 <header>
+
 <div class="header-inner">
 
-<a class="instagram-tag"
+<a
+class="instagram-tag"
 href="https://www.instagram.com/cars_for_fun_official/"
 target="_blank"
 rel="noopener noreferrer">
@@ -317,13 +389,16 @@ alt="AK Cars for Fun">
 <div></div>
 
 </div>
+
 </header>
 
 <main>
 
 <section id="home" class="page active">
 
-<div class="tag">ZAGREB / HRVATSKA — AKCF</div>
+<div class="tag">
+ZAGREB / HRVATSKA — AKCF
+</div>
 
 <h1>
 VIŠE OD<br>
@@ -336,30 +411,68 @@ Dobrodošli u digitalnu garažu AK Cars for Fun.
 </p>
 
 <div class="card clickable" onclick="showPage('members')">
-<span class="card-label">23 ČLANA</span>
-<h3>Naša ekipa →</h3>
-<p>Upoznaj članove AK Cars for Fun.</p>
+
+<span class="card-label">
+23 ČLANA
+</span>
+
+<h3>
+Naša ekipa →
+</h3>
+
+<p>
+Upoznaj članove AK Cars for Fun.
+</p>
+
 </div>
 
 <div class="card clickable" onclick="showPage('garage')">
-<span class="card-label">24 VOZILA</span>
-<h3>Digitalna garaža →</h3>
-<p>Pogledaj vozila naše ekipe.</p>
+
+<span class="card-label">
+24 VOZILA
+</span>
+
+<h3>
+Digitalna garaža →
+</h3>
+
+<p>
+Pogledaj vozila naše ekipe.
+</p>
+
 </div>
 
 <div class="card clickable" onclick="showPage('meets')">
-<span class="card-label">AKCF EVENTS</span>
-<h3>Meetovi →</h3>
-<p>Pogledaj gdje je bila AK Cars for Fun ekipa.</p>
+
+<span class="card-label">
+AKCF EVENTS
+</span>
+
+<h3>
+Meetovi →
+</h3>
+
+<p>
+Pogledaj gdje je bila AK Cars for Fun ekipa.
+</p>
+
 </div>
 
 </section>
 
 <section id="members" class="page">
 
-<div class="tag">AK CARS FOR FUN</div>
-<h2>Članovi</h2>
-<p class="intro">23 člana. 24 vozila. Jedna ekipa.</p>
+<div class="tag">
+AK CARS FOR FUN
+</div>
+
+<h2>
+Članovi
+</h2>
+
+<p class="intro">
+23 člana. 24 vozila. Jedna ekipa.
+</p>
 
 <div id="members-list"></div>
 
@@ -369,9 +482,17 @@ Dobrodošli u digitalnu garažu AK Cars for Fun.
 
 <section id="garage" class="page">
 
-<div class="tag">24 VOZILA</div>
-<h2>Garaža</h2>
-<p class="intro">Digitalna garaža AK Cars for Fun.</p>
+<div class="tag">
+24 VOZILA
+</div>
+
+<h2>
+Garaža
+</h2>
+
+<p class="intro">
+Digitalna garaža AK Cars for Fun.
+</p>
 
 <div id="garage-list"></div>
 
@@ -379,72 +500,183 @@ Dobrodošli u digitalnu garažu AK Cars for Fun.
 
 <section id="meets" class="page">
 
-<div class="tag">AKCF EVENTS</div>
-<h2>Meetovi</h2>
+<div class="tag">
+AKCF EVENTS
+</div>
+
+<h2>
+Meetovi
+</h2>
 
 <p class="intro">
 Mjesta na kojima smo bili, automobili koje smo predstavljali i uspomene koje smo napravili.
 </p>
 
 <div class="card clickable" onclick="showPage('meet-beasts')">
-<img class="meet-cover" src="IMG_0840.jpeg">
-<div class="meet-date">19.09.2026.</div>
-<h3>AK Beasts Meet</h3>
-<p>5 članova AK Cars for Fun • 3 osvojena plasmana</p>
-<div class="meet-stats">
-<span class="meet-stat">🏆 3 plasmana</span>
-<span class="meet-stat">🚗 5 članova</span>
-<span class="meet-stat">📸 6 fotografija</span>
+
+<img
+class="meet-cover"
+src="IMG_0840.jpeg">
+
+<div class="meet-date">
+19.09.2026.
 </div>
+
+<h3>
+AK Beasts Meet
+</h3>
+
+<p>
+5 članova AK Cars for Fun • 3 osvojena plasmana
+</p>
+
+<div class="meet-stats">
+
+<span class="meet-stat">
+🏆 3 plasmana
+</span>
+
+<span class="meet-stat">
+🚗 5 članova
+</span>
+
+<span class="meet-stat">
+📸 6 fotografija
+</span>
+
+</div>
+
 </div>
 
 <div class="card clickable" onclick="showPage('meet-vw')">
-<img class="meet-cover" src="IMG_0834.jpeg">
-<div class="meet-date">02.09.2026.</div>
-<h3>VW Meet Dugo Selo</h3>
-<p>Željko i Kristijan predstavljali AK Cars for Fun.</p>
-<div class="meet-stats">
-<span class="meet-stat">🏆 TOP 30</span>
-<span class="meet-stat">🚗 2 člana</span>
-<span class="meet-stat">📸 6 fotografija</span>
+
+<img
+class="meet-cover"
+src="IMG_0834.jpeg">
+
+<div class="meet-date">
+02.09.2026.
 </div>
+
+<h3>
+VW Meet Dugo Selo
+</h3>
+
+<p>
+Željko i Kristijan predstavljali AK Cars for Fun.
+</p>
+
+<div class="meet-stats">
+
+<span class="meet-stat">
+🏆 TOP 30
+</span>
+
+<span class="meet-stat">
+🚗 2 člana
+</span>
+
+<span class="meet-stat">
+📸 6 fotografija
+</span>
+
+</div>
+
 </div>
 
 <div class="card clickable" onclick="showPage('meet-garage-freaks')">
-<img class="meet-cover" src="IMG_0832.jpeg">
-<div class="meet-date">19.07.2026.</div>
-<h3>AK Garage Freaks Meet</h3>
-<p>Prvi meet u našoj arhivi.</p>
-<div class="meet-stats">
-<span class="meet-stat">🚗 4 člana</span>
-<span class="meet-stat">📸 3 fotografije</span>
+
+<img
+class="meet-cover"
+src="IMG_0832.jpeg">
+
+<div class="meet-date">
+19.07.2026.
 </div>
+
+<h3>
+AK Garage Freaks Meet
+</h3>
+
+<p>
+Prvi meet u našoj arhivi.
+</p>
+
+<div class="meet-stats">
+
+<span class="meet-stat">
+🚗 4 člana
+</span>
+
+<span class="meet-stat">
+📸 3 fotografije
+</span>
+
+</div>
+
 </div>
 
 </section>
 
 <section id="meet-beasts" class="page">
 
-<button class="back" onclick="showPage('meets')">← Natrag na meetove</button>
+<button
+class="back"
+onclick="showPage('meets')">
+← Natrag na meetove
+</button>
 
-<div class="tag">MEET #03</div>
-<h2>AK Beasts</h2>
-<p class="intro">19.09.2026. • Meet u organizaciji AK Beasts</p>
+<div class="tag">
+MEET #03
+</div>
 
-<img class="meet-cover" src="IMG_0840.jpeg">
+<h2>
+AK Beasts
+</h2>
+
+<p class="intro">
+19.09.2026. • Meet u organizaciji AK Beasts
+</p>
+
+<img
+class="meet-cover"
+src="IMG_0840.jpeg">
 
 <div class="card">
-<span class="card-label">AK CARS FOR FUN POSTAVA</span>
+
+<span class="card-label">
+AK CARS FOR FUN POSTAVA
+</span>
+
 <div class="mods">
-<span class="mod">Kristijan</span>
-<span class="mod">Matija</span>
-<span class="mod">Fran</span>
-<span class="mod">Filip</span>
-<span class="mod">Fabian</span>
-</div>
+
+<span class="mod">
+Kristijan
+</span>
+
+<span class="mod">
+Matija
+</span>
+
+<span class="mod">
+Fran
+</span>
+
+<span class="mod">
+Filip
+</span>
+
+<span class="mod">
+Fabian
+</span>
+
 </div>
 
-<h3 class="section-title">🏆 Rezultati</h3>
+</div>
+
+<h3 class="section-title">
+🏆 Rezultati
+</h3>
 
 <div class="award">
 <strong>Kristijan</strong><br>
@@ -461,102 +693,178 @@ TOP 3 — Euro Style
 TOP 15
 </div>
 
-<h3 class="section-title">Galerija</h3>
+<h3 class="section-title">
+Galerija
+</h3>
 
 <div class="meet-gallery">
+
 <img src="IMG_0840.jpeg" onclick="openLightbox(this)">
 <img src="IMG_0841.jpeg" onclick="openLightbox(this)">
 <img src="IMG_0842.jpeg" onclick="openLightbox(this)">
 <img src="IMG_0843.jpeg" onclick="openLightbox(this)">
 <img src="IMG_0844.jpeg" onclick="openLightbox(this)">
 <img src="IMG_0845.jpeg" onclick="openLightbox(this)">
+
 </div>
 
 </section>
 
 <section id="meet-vw" class="page">
 
-<button class="back" onclick="showPage('meets')">← Natrag na meetove</button>
+<button
+class="back"
+onclick="showPage('meets')">
+← Natrag na meetove
+</button>
 
-<div class="tag">MEET #02</div>
-<h2>VW Meet Dugo Selo</h2>
-<p class="intro">02.09.2026.</p>
+<div class="tag">
+MEET #02
+</div>
 
-<img class="meet-cover" src="IMG_0834.jpeg">
+<h2>
+VW Meet Dugo Selo
+</h2>
+
+<p class="intro">
+02.09.2026.
+</p>
+
+<img
+class="meet-cover"
+src="IMG_0834.jpeg">
 
 <div class="card">
-<span class="card-label">AK CARS FOR FUN POSTAVA</span>
+
+<span class="card-label">
+AK CARS FOR FUN POSTAVA
+</span>
+
 <div class="mods">
-<span class="mod">Kristijan — SEAT Leon FR</span>
-<span class="mod">Željko — VW Golf 4</span>
-</div>
+
+<span class="mod">
+Kristijan — SEAT Leon FR
+</span>
+
+<span class="mod">
+Željko — VW Golf 4
+</span>
+
 </div>
 
-<h3 class="section-title">🏆 Rezultat</h3>
+</div>
+
+<h3 class="section-title">
+🏆 Rezultat
+</h3>
 
 <div class="award">
 <strong>Kristijan — SEAT Leon FR</strong><br>
 TOP 30
 </div>
 
-<h3 class="section-title">Galerija</h3>
+<h3 class="section-title">
+Galerija
+</h3>
 
 <div class="meet-gallery">
+
 <img src="IMG_0833.jpeg" onclick="openLightbox(this)">
 <img src="IMG_0834.jpeg" onclick="openLightbox(this)">
 <img src="IMG_0835.jpeg" onclick="openLightbox(this)">
 <img src="IMG_0837.jpeg" onclick="openLightbox(this)">
 <img src="IMG_0838.jpeg" onclick="openLightbox(this)">
 <img src="IMG_0839.jpeg" onclick="openLightbox(this)">
+
 </div>
 
 </section>
 
 <section id="meet-garage-freaks" class="page">
 
-<button class="back" onclick="showPage('meets')">← Natrag na meetove</button>
+<button
+class="back"
+onclick="showPage('meets')">
+← Natrag na meetove
+</button>
 
-<div class="tag">MEET #01</div>
-<h2>AK Garage Freaks</h2>
+<div class="tag">
+MEET #01
+</div>
+
+<h2>
+AK Garage Freaks
+</h2>
 
 <p class="intro">
 19.07.2026. • Prvi meet u AK Cars for Fun arhivi.
 </p>
 
-<img class="meet-cover" src="IMG_0832.jpeg">
+<img
+class="meet-cover"
+src="IMG_0832.jpeg">
 
 <div class="card">
-<span class="card-label">AK CARS FOR FUN POSTAVA</span>
+
+<span class="card-label">
+AK CARS FOR FUN POSTAVA
+</span>
 
 <div class="mods">
-<span class="mod">Matea — Hyundai</span>
-<span class="mod">Željko — VW Golf 4</span>
-<span class="mod">Matija — Opel Astra</span>
-<span class="mod">Kristijan — SEAT</span>
-</div>
+
+<span class="mod">
+Matea — Hyundai
+</span>
+
+<span class="mod">
+Željko — VW Golf 4
+</span>
+
+<span class="mod">
+Matija — Opel Astra
+</span>
+
+<span class="mod">
+Kristijan — SEAT
+</span>
+
 </div>
 
-<h3 class="section-title">Galerija</h3>
+</div>
+
+<h3 class="section-title">
+Galerija
+</h3>
 
 <div class="meet-gallery">
+
 <img src="IMG_0830.jpeg" onclick="openLightbox(this)">
 <img src="IMG_0831.jpeg" onclick="openLightbox(this)">
 <img src="IMG_0832.jpeg" onclick="openLightbox(this)">
+
 </div>
 
 </section>
 
 <section id="gallery" class="page">
 
-<div class="tag">AKCF MEDIA</div>
-<h2>Galerija</h2>
+<div class="tag">
+AKCF MEDIA
+</div>
+
+<h2>
+Galerija
+</h2>
 
 <p class="intro">
 Automobili članova AK Cars for Fun.
 Klikni fotografiju za povećanje.
 </p>
 
-<div class="meet-gallery" id="main-gallery"></div>
+<div
+class="meet-gallery"
+id="main-gallery">
+</div>
 
 </section>
 
@@ -564,56 +872,99 @@ Klikni fotografiju za povećanje.
 
 <nav>
 
-<button class="active" onclick="showPage('home',this)">
-<span class="nav-icon">⌂</span>
+<button
+class="active"
+onclick="showPage('home',this)">
+
+<span class="nav-icon">
+⌂
+</span>
+
 POČETNA
+
 </button>
 
-<button onclick="showPage('members',this)">
-<span class="nav-icon">♙</span>
+<button
+onclick="showPage('members',this)">
+
+<span class="nav-icon">
+♙
+</span>
+
 ČLANOVI
+
 </button>
 
-<button onclick="showPage('garage',this)">
-<span class="nav-icon">🚗</span>
+<button
+onclick="showPage('garage',this)">
+
+<span class="nav-icon">
+🚗
+</span>
+
 GARAŽA
+
 </button>
 
-<button onclick="showPage('meets',this)">
-<span class="nav-icon">◆</span>
+<button
+onclick="showPage('meets',this)">
+
+<span class="nav-icon">
+◆
+</span>
+
 MEETOVI
+
 </button>
 
-<button onclick="showPage('gallery',this)">
-<span class="nav-icon">▦</span>
+<button
+onclick="showPage('gallery',this)">
+
+<span class="nav-icon">
+▦
+</span>
+
 GALERIJA
+
 </button>
 
 </nav>
 
-<div id="lightbox" class="lightbox" onclick="closeLightbox(event)">
+<div
+id="lightbox"
+class="lightbox"
+onclick="closeLightbox(event)">
 
-<button class="lightbox-close" onclick="closeLightbox(event)">
+<button
+class="lightbox-close"
+onclick="closeLightbox(event)">
 ×
 </button>
 
-<img id="lightbox-image" src="" alt="Fotografija">
+<img
+id="lightbox-image"
+src=""
+alt="Fotografija">
 
 </div>
 
 <script>
 
 const members = [
+
 {
 id:'zeljko',
 name:'Željko',
+
 cars:[{
+
 name:'VW Golf 4',
 year:'1998.',
 engine:'1.9 TDI',
 power:'150 KS',
 image:'IMG_5436.jpeg',
 rims:'Ispiri 18"',
+
 mods:[
 'Stage 1',
 'Downpipe',
@@ -624,19 +975,24 @@ mods:[
 'Zadnji Jubi lip',
 'Recaro sjedala'
 ]
+
 }]
+
 },
 
 {
 id:'kristijan',
 name:'Kristijan',
+
 cars:[{
+
 name:'SEAT Leon FR',
 year:'2014.',
 engine:'2.0 TDI',
 power:'184 KS',
 image:'IMG_5511.jpeg',
 rims:'Motec',
+
 mods:[
 'AP gewinde',
 'Maxton prednji lip',
@@ -648,26 +1004,34 @@ mods:[
 'Custom obloga volana',
 'Golf R shifter'
 ]
+
 }]
+
 },
 
 {
 id:'ivan',
 name:'Ivan',
+
 cars:[{
+
 name:'Mercedes-Benz C-klasa Coupé',
 year:'2012.',
 engine:'220 CDI',
 power:'220 KS',
 image:'E3DAC88B-872D-42EB-A552-9F9FBBA08405.jpeg',
 mods:[]
+
 }]
+
 },
 
 {
 id:'leon',
 name:'Leon',
+
 cars:[{
+
 name:'VW Passat B5.5',
 year:'2001.',
 engine:'1.9 TDI',
@@ -675,13 +1039,17 @@ power:'130 KS',
 image:'IMG_0088.jpeg',
 rims:'VW felge',
 mods:[]
+
 }]
+
 },
 
 {
 id:'mare',
 name:'Mare',
+
 cars:[{
+
 name:'VW Jetta',
 year:'1997.',
 engine:'1.8',
@@ -690,6 +1058,7 @@ factory:'90 KS',
 map:'130 KS',
 image:'f43f177b-8c9a-4eb7-81d0-60cfafc8ebc0.jpeg',
 rims:'Technomagnetic',
+
 mods:[
 'Rieger bočni pragovi',
 'Rieger stražnji spojler',
@@ -710,49 +1079,63 @@ mods:[
 'Prednji strut bar',
 'TA Technix gewinde'
 ]
+
 }]
+
 },
 
 {
 id:'matea',
 name:'Matea',
+
 cars:[{
+
 name:'SEAT Cordoba',
 year:'2005.',
 engine:'1.9 TDI',
 power:'105 KS',
 image:'IMG_0818.jpeg',
 mods:[]
+
 }]
+
 },
 
 {
 id:'toni',
 name:'Toni',
+
 cars:[{
+
 name:'Honda Civic',
 year:'1999.',
 engine:'1.5 VTEC',
 power:'114 KS',
 image:'IMG_0819.jpeg',
+
 mods:[
 'Gewinde',
 'Felge',
 'Poluprotok ispuh',
 'Usis "slonova kita"'
 ]
+
 }]
+
 },
 
 {
 id:'dominik',
 name:'Dominik',
+
 cars:[{
+
 name:'Mitsubishi Lancer',
 year:'1996.',
 engine:'1.3',
 power:'75 KS',
 image:'IMG_0820.jpeg',
+
 mods:[
 'Spoiler',
 'Wrap',
@@ -761,18 +1144,23 @@ mods:[
 'Lipovi',
 'Underglow'
 ]
+
 }]
+
 },
 
 {
 id:'roberto',
 name:'Roberto',
+
 cars:[{
+
 name:'Sanil Silverstone SI50QT',
 year:'2002.',
 engine:'50 cc',
 power:'3 KS',
 image:'IMG_0821.jpeg',
+
 mods:[
 'Novi karburator',
 'Funkcionalna rasvjeta',
@@ -782,48 +1170,62 @@ mods:[
 'Glasniji ispuh',
 'Nova stražnja guma'
 ]
+
 }]
+
 },
 
 {
 id:'luka',
 name:'Luka',
+
 cars:[{
+
 name:'Mercedes C 220 CDI Coupé',
 year:'2012.',
 engine:'2.2 CDI',
 power:'170 KS',
 image:'IMG_0822.jpeg',
 mods:[]
+
 }]
+
 },
 
 {
 id:'filip',
 name:'Filip',
+
 cars:[{
+
 name:'BMW E61',
 year:'2004.',
 engine:'3.0d',
 power:'218 KS',
 image:'DSC_0657.jpeg',
+
 mods:[
 'JOM Blueline gewinde naprijed',
 'Prednje 550i kočnice'
 ]
+
 }]
+
 },
 
 {
 id:'fran',
 name:'Fran',
+
 cars:[
+
 {
 name:'VW Golf 6',
 year:'2011.',
 engine:'2.0 TFSI',
 power:'270 KS',
 image:'IMG_0823.jpeg',
+
 mods:[
 'Kovani motor',
 'REVO Stage 2',
@@ -832,13 +1234,16 @@ mods:[
 'KW V3 gewinde',
 'Milltek ispuh'
 ]
+
 },
+
 {
 name:'SEAT Ibiza',
 year:'2004.',
 engine:'1.9 TDI',
 power:'131 KS',
 image:'IMG_0824.jpeg',
+
 mods:[
 'Kovani motor',
 'Multi-mape',
@@ -850,32 +1255,42 @@ mods:[
 'GTI sjedala',
 'FR volan'
 ]
+
 }
+
 ]
+
 },
 
 {
 id:'sebastian',
 name:'Sebastian',
+
 cars:[{
+
 name:'VW Golf 7',
 year:'2015.',
 engine:'1.6 TDI',
 power:'105 KS',
 image:'IMG_0825.jpeg',
 mods:[]
+
 }]
+
 },
 
 {
 id:'stjepan',
 name:'Stjepan',
+
 cars:[{
+
 name:'VW Golf 5',
 year:'2005.',
 engine:'1.9 TDI',
 power:'105 KS',
 image:'IMG_0826.jpeg',
+
 mods:[
 'Stage 2 prema navodu vlasnika',
 '6-brzinski ručni mjenjač',
@@ -889,18 +1304,23 @@ mods:[
 'BBS Speedline 18x9J',
 'Audi 19x8J'
 ]
+
 }]
+
 },
 
 {
 id:'niko',
 name:'Niko',
+
 cars:[{
+
 name:'VW Golf 5',
 year:'2006.',
 engine:'1.9 TDI',
 power:'90 KS',
 image:'IMG_0827.jpeg',
+
 mods:[
 'Jetta prednji branik',
 'Maglenke',
@@ -922,18 +1342,23 @@ mods:[
 'USA style',
 'Coming Home'
 ]
+
 }]
+
 },
 
 {
 id:'matija',
 name:'Matija',
+
 cars:[{
+
 name:'Opel Astra H',
 year:'2009.',
 engine:'1.4 benzin',
 power:'90 KS',
 image:'IMG_0828.jpeg',
+
 mods:[
 'K&N usis',
 'Originalne felge',
@@ -945,37 +1370,49 @@ mods:[
 'Deflektori',
 'Zatamnjeno treće stop svjetlo'
 ]
+
 }]
+
 },
 
 {
 id:'jan',
 name:'Jan',
+
 cars:[{
+
 name:'Renault Clio Alpine',
 year:'2024.',
 engine:'1.0',
 power:'130 KS',
 image:'IMG_0829.jpeg',
 rims:'Alpine',
+
 equipment:[
 'BOSE ozvučenje',
 'Alpine interijer',
 'Alpine felge'
 ],
+
 mods:[]
+
 }]
+
 },
 
 {
 id:'josip',
 name:'Josip',
+
 cars:[{
+
 name:'VW Golf 4',
 year:'2001.',
 engine:'1.9 TDI ATD → ARL',
 power:'150 KS',
+
 image:'09d9a059-17d3-49eb-b8a5-0dd89f7496f8.jpeg',
+
 mods:[
 '1749V hybrid turbina s billet rotorom',
 'Kompletni GTI ovjes s oprugama',
@@ -984,37 +1421,50 @@ mods:[
 'Ambijentalna rasvjeta u kabini',
 'Audio sustav 2500 W s dva pojačala'
 ]
+
 }]
+
 },
 
 {
 id:'mihael',
 name:'Mihael',
+
 cars:[{
+
 name:'Ford Focus',
 year:'2008.',
 engine:'1.4',
 power:'90 KS',
+
 image:'be66855d-ddfb-4fc7-95df-0a2faf87ecf2.jpeg',
+
 mods:[
 'Gewinde',
 'Zvuk u vratima 180 W 2-way ×2',
 'Visokotonci 110 W ×2',
 'Subwoofer 1800 W'
 ]
+
 }]
+
 },
 
 {
 id:'fabian',
 name:'Fabian',
+
 cars:[{
+
 name:'Hyundai Coupe GK2',
 year:'2002.',
 engine:'2.0',
 power:'140 KS',
+
 image:'B98D0CC4-64C1-40ED-9B48-1558EFEA34D8.jpeg',
+
 rims:'JR3',
+
 mods:[
 'Facelift prednji branik s lipovima',
 'Facelift farovi Angel Eyes',
@@ -1023,78 +1473,111 @@ mods:[
 'H&R opruge -35 mm',
 'Pojačalo i woofer'
 ]
+
 }]
+
 },
 
 {
 id:'dorian',
 name:'Dorian',
+
 cars:[{
+
 name:'BMW E39 530d',
 year:'2003.',
 engine:'3.0 diesel',
 power:'184 KS',
+
 image:'22d4d96b-d08d-45f8-a92b-3788019fd2d9.jpeg',
+
 rims:'Style 128',
+
 mods:[
 'Facelift prednji branik',
 'Sportski auspuh'
 ]
+
 }]
+
 },
 
 {
 id:'valentino',
 name:'Valentino',
+
 cars:[{
+
 name:'BMW E92',
 year:'2010.',
 engine:'2.0',
 power:'184 KS',
+
 image:'IMG_1416.jpeg',
+
 mods:[]
+
 }]
+
 },
 
 {
 id:'matej',
 name:'Matej',
+
 cars:[{
+
 name:'Mazda RX-8',
 year:'2004.',
 engine:'13B-MSP',
 power:'231 KS',
+
 image:'IMG_0944.jpeg',
+
 mods:[
 'EBC diskovi',
 'Eibach Pro-Kit',
 'Crveni Strongflex seleni',
 'Invidia Q300 ispuh'
 ]
+
 }]
+
 }
+
 ];
 
 function esc(text){
+
 return String(text ?? '')
+
 .replace(/&/g,'&amp;')
 .replace(/</g,'&lt;')
 .replace(/>/g,'&gt;')
 .replace(/"/g,'&quot;')
 .replace(/'/g,'&#039;');
+
 }
 
 function renderMembers(){
 
-const holder=document.getElementById('members-list');
+const holder=
+document.getElementById('members-list');
 
-holder.innerHTML=members.map(member=>{
+holder.innerHTML=
+members.map(member=>{
 
-const firstCar=member.cars[0];
-const multi=member.cars.length>1;
+const firstCar=
+member.cars[0];
+
+const multi=
+member.cars.length>1;
 
 return `
-<div class="card clickable" onclick="openProfile('${esc(member.id)}')">
+
+<div
+class="card clickable"
+onclick="openProfile('${esc(member.id)}')">
 
 <img
 class="member-car"
@@ -1102,19 +1585,37 @@ src="${esc(firstCar.image)}"
 alt="${esc(member.name)} - ${esc(firstCar.name)}">
 
 <span class="card-label">
-${multi ? member.cars.length+' VOZILA' : 'ČLAN'}
+
+${multi
+? member.cars.length+' VOZILA'
+: 'ČLAN'}
+
 </span>
 
-<h3>${esc(member.name)}</h3>
+<h3>
+${esc(member.name)}
+</h3>
 
 <p>
+
 ${multi
-? member.cars.map(c=>esc(c.name)).join(' • ')
-: `${esc(firstCar.name)} • ${esc(firstCar.year)}<br>${esc(firstCar.engine)} • ${esc(firstCar.power)}`
+
+? member.cars
+.map(c=>esc(c.name))
+.join(' • ')
+
+:
+
+`${esc(firstCar.name)} • ${esc(firstCar.year)}
+<br>
+${esc(firstCar.engine)} • ${esc(firstCar.power)}`
+
 }
+
 </p>
 
 </div>
+
 `;
 
 }).join('');
@@ -1124,6 +1625,7 @@ ${multi
 function renderCarProfile(car){
 
 let specs=`
+
 <div class="spec">
 <small>GODIŠTE</small>
 <strong>${esc(car.year)}</strong>
@@ -1138,33 +1640,46 @@ let specs=`
 <small>SNAGA</small>
 <strong>${esc(car.power)}</strong>
 </div>
+
 `;
 
 if(car.factory){
+
 specs+=`
+
 <div class="spec">
 <small>TVORNIČKI</small>
 <strong>${esc(car.factory)}</strong>
 </div>
+
 `;
+
 }
 
 if(car.map){
+
 specs+=`
+
 <div class="spec">
 <small>MAPA</small>
 <strong>${esc(car.map)}</strong>
 </div>
+
 `;
+
 }
 
 if(car.rims){
+
 specs+=`
+
 <div class="spec">
 <small>FELGE</small>
 <strong>${esc(car.rims)}</strong>
 </div>
+
 `;
+
 }
 
 let details='';
@@ -1172,6 +1687,7 @@ let details='';
 if(car.mods && car.mods.length){
 
 details+=`
+
 <div class="card">
 
 <span class="card-label">
@@ -1185,7 +1701,9 @@ ${car.mods.map(mod=>
 ).join('')}
 
 </div>
+
 </div>
+
 `;
 
 }
@@ -1193,6 +1711,7 @@ ${car.mods.map(mod=>
 if(car.equipment && car.equipment.length){
 
 details+=`
+
 <div class="card">
 
 <span class="card-label">
@@ -1206,12 +1725,15 @@ ${car.equipment.map(item=>
 ).join('')}
 
 </div>
+
 </div>
+
 `;
 
 }
 
 return `
+
 <img
 class="profile-car"
 src="${esc(car.image)}"
@@ -1226,17 +1748,20 @@ ${specs}
 </div>
 
 ${details}
+
 `;
 
 }
 
 function openProfile(id){
 
-const member=members.find(item=>item.id===id);
+const member=
+members.find(item=>item.id===id);
 
 if(!member)return;
 
-const profile=document.getElementById('profile');
+const profile=
+document.getElementById('profile');
 
 let content=`
 
@@ -1259,29 +1784,36 @@ ${esc(member.name)}
 if(member.cars.length>1){
 
 content+=`
+
 <div class="profile-car-name">
 ${member.cars.length} VOZILA
 </div>
+
 `;
 
 member.cars.forEach(car=>{
 
 content+=`
+
 <h3 class="section-title">
 ${esc(car.name)}
 </h3>
+
 ${renderCarProfile(car)}
+
 `;
 
 });
 
 }else{
 
-content+=renderCarProfile(member.cars[0]);
+content+=
+renderCarProfile(member.cars[0]);
 
 }
 
-profile.innerHTML=content;
+profile.innerHTML=
+content;
 
 showPage('profile');
 
@@ -1289,7 +1821,8 @@ showPage('profile');
 
 function renderGarage(){
 
-const holder=document.getElementById('garage-list');
+const holder=
+document.getElementById('garage-list');
 
 const cards=[];
 
@@ -1317,7 +1850,11 @@ ${esc(car.name)}
 </h3>
 
 <p>
-${esc(car.year)} • ${esc(car.engine)} • ${esc(car.power)}
+${esc(car.year)}
+•
+${esc(car.engine)}
+•
+${esc(car.power)}
 </p>
 
 </div>
@@ -1328,23 +1865,27 @@ ${esc(car.year)} • ${esc(car.engine)} • ${esc(car.power)}
 
 });
 
-holder.innerHTML=cards.join('');
+holder.innerHTML=
+cards.join('');
 
 }
 
 function renderGallery(){
 
-const holder=document.getElementById('main-gallery');
+const holder=
+document.getElementById('main-gallery');
 
 const images=[];
 
 members.forEach(member=>{
 
-member.cars.forEach(car=>images.push(car));
+member.cars.forEach(car=>
+images.push(car));
 
 });
 
-holder.innerHTML=images.map(car=>`
+holder.innerHTML=
+images.map(car=>`
 
 <img
 src="${esc(car.image)}"
@@ -1357,22 +1898,35 @@ onclick="openLightbox(this)">
 
 function showPage(pageId,button){
 
-document.querySelectorAll('.page').forEach(function(page){
+document
+.querySelectorAll('.page')
+.forEach(function(page){
+
 page.classList.remove('active');
+
 });
 
-var target=document.getElementById(pageId);
+var target=
+document.getElementById(pageId);
 
 if(target){
+
 target.classList.add('active');
+
 }
 
-document.querySelectorAll('nav button').forEach(function(btn){
+document
+.querySelectorAll('nav button')
+.forEach(function(btn){
+
 btn.classList.remove('active');
+
 });
 
 if(button){
+
 button.classList.add('active');
+
 }
 
 window.scrollTo(0,0);
@@ -1381,17 +1935,22 @@ window.scrollTo(0,0);
 
 function openLightbox(image){
 
-var lightbox=document.getElementById('lightbox');
+var lightbox=
+document.getElementById('lightbox');
 
-var lightboxImage=document.getElementById('lightbox-image');
+var lightboxImage=
+document.getElementById('lightbox-image');
 
-lightboxImage.src=image.src;
+lightboxImage.src=
+image.src;
 
-lightboxImage.alt=image.alt || 'AK Cars for Fun';
+lightboxImage.alt=
+image.alt || 'AK Cars for Fun';
 
 lightbox.classList.add('active');
 
-document.body.style.overflow='hidden';
+document.body.style.overflow=
+'hidden';
 
 }
 
@@ -1402,7 +1961,9 @@ event &&
 event.target.id!=='lightbox' &&
 !event.target.classList.contains('lightbox-close')
 ){
+
 return;
+
 }
 
 document
@@ -1414,7 +1975,9 @@ document.body.style.overflow='';
 
 }
 
-document.addEventListener('keydown',function(event){
+document.addEventListener(
+'keydown',
+function(event){
 
 if(event.key==='Escape'){
 
@@ -1430,7 +1993,9 @@ document.body.style.overflow='';
 });
 
 renderMembers();
+
 renderGarage();
+
 renderGallery();
 
 </script>
